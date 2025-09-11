@@ -1,0 +1,426 @@
+/* Reset dasar */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* 1rem = 16px */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+  color: #333;
+}
+
+/* ---------------- Navbar Coklat ---------------- */
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8c7355;
+  padding: 0.625rem 1.25rem; /* 10px 20px */
+}
+
+.navbar-bottom{
+  display: flex;
+}
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem; /* 10px */
+}
+
+.brand-logo {
+  height: 3.125rem; /* 50px */
+  width: auto;
+}
+
+/* The parent container for the buttons */
+.menu-section {
+  display: flex;
+  align-items: center;
+  gap: 0.9375rem; /* 15px */
+}
+
+/* Base styles for the Sign Up and Log In buttons */
+.signup-btn, .login-btn {
+  /* Common button styles */
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px; /* This makes the corners fully rounded */
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  
+  /* Initial state: no fill, just a transparent border and text */
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+/* Hover effect */
+.signup-btn:hover {
+  /* On hover, the background becomes a semi-transparent white */
+  background-color: #333333;
+  
+  /* The border color also becomes a solid white */
+  border: 1px solid #333333;
+
+  /* The text color becomes a solid white */
+  color: #fff;
+}
+
+.login-btn:hover {
+   /* On hover, the background becomes a semi-transparent white */
+  background-color: #ffffff;
+  
+  /* The border color also becomes a solid white */
+  border: 1px solid #ffffff;
+
+  /* The text color becomes a solid white */
+  color: #adadad;
+}
+
+.btn-img {
+  height: 2.5rem; /* 40px */
+  width: auto;
+}
+
+.hamburger-btn {
+  height: 2.5rem; /* 40px */
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  color: inherit;
+}
+
+/* ---------------- Navbar Hitam ---------------- */
+.navbar-bottom {
+  background-color: #1a1a1a;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0.5rem 1rem;
+  height: 1.875rem;
+  gap: 30px; /* Adjust this value as needed for spacing between items */
+}
+
+.navbar-bottom h2 {
+  margin: 0; /* Remove all margin to let the parent container control spacing */
+  color: #fff;
+  font-weight: normal;
+  font-size: 1rem;
+  text-align: flex-start;
+}
+
+
+
+/* Bagian body */
+
+.hero {
+  position: relative;
+  height: 400px;
+  background: url('../foto/anjg.jpg') center/cover no-repeat;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.hero img {
+  width: 1.6rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.58);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.search-bar {
+  display: flex;
+  margin-bottom: 20px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 25px 0 0 25px;
+  font-size: 14px;
+}
+
+.search-bar button {
+  border: none;
+  border-radius: 0 25px 25px 0;
+  background: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px; /* biar lebih pas */
+}
+
+.search-bar button img {
+  width: 18px;   /* sesuaikan ukuran icon */
+  height: 18px;
+}
+.hero h1 {
+  color: white;
+  font-size: 6rem;
+  margin: 0;
+}
+
+.hero p {
+  color: #eee;
+  margin-top: 8px;
+  font-size: 2rem;
+}
+
+.navbarbody {
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: space-evenly; 
+  height: 1rem; 
+  align-items: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: -60px auto 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  color: #333;
+  aspect-ratio: 1 / 1; 
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: -60px auto 0 auto; 
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 200px  ;
+  height: 200px;
+  object-fit: auto;
+}
+
+.card h3 {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Bagian ava pet */
+
+/* ===== Available Pets Section ===== */
+.available-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 0;
+  font-size: 20px;
+}
+
+.section-title {
+  background-color: #957B65;
+  color: white;
+  padding: 10px 345px;
+  border-radius: 4px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.pets-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.pet-card {
+  background-color: #1a1a1a; 
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  padding: 10px 10px 0 10px; 
+  width: 200px; 
+}
+
+.pet-image {
+  width: 100%;         
+  aspect-ratio: 1 / 1; 
+  object-fit: cover;   
+  display: block;
+  border-radius: 4px 4px 0 0;
+  background-color: #957B65; 
+}
+
+.pet-name {
+  padding: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+.more-button {
+  background-color: #957B65;
+  color: white;
+  border: none;
+  padding: 10px 100px;
+  font-size: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.more-button:hover {
+  background-color: #6d5240;
+}
+
+
+
+/* Footer */
+
+.footer {
+  background-color: #957B65; /* warna coklat */
+  color: white;
+  padding: 30px 50px;
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+  font-size: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Links */
+.footer-links h2,
+.footer-members h2,
+.footer-social h2 {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.footer-links ul,
+.footer-members ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-members li {
+  margin: 5px 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Social Icons */
+.footer-social .social-icons {
+  display: grid;
+  grid-template-columns: repeat(2, 40px);
+  gap: 10px;
+}
+
+.footer-social .social-icons img {
+  background: #1a1a1a;
+  padding: 8px;
+  border-radius: 8px;
+  width: 24px;
+  height: 24px;
+}
+
+/* Copyright */
+.footer-bottom {
+  border-top: 1px solid #333;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 40px;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;  
+  gap: 50px;           
+}
+
+
+.footer-logo {
+  text-align: center;
+}
+.footer-logo img {
+  width: 145px;
+  margin-bottom: 10px;
+}
+
+.footer-chart img {
+  width: 250px;
+  border-radius: 12px;
+  background: #333; 
+  padding: 10px;
+}
+

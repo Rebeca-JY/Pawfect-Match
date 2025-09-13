@@ -1,8 +1,8 @@
-# 🐾 PawFetch Match
+# PawFetch Match
 
 PawFetch Match adalah platform adopsi hewan peliharaan dan pembelian perlengkapan hewan. Dengan tampilan yang ramah pengguna, kamu bisa menjelajahi berbagai kategori hewan, menyimpan favorit, hingga melakukan adopsi atau pembelian dengan mudah.  
 
-## 📖 Cara Menggunakan PawFetch Match
+## Cara Menggunakan PawFetch Match
 
 ### 1. Homepage
 - Saat pertama kali masuk ke website, kamu akan diarahkan ke halaman **Home**.  
@@ -13,7 +13,7 @@ PawFetch Match adalah platform adopsi hewan peliharaan dan pembelian perlengkapa
 
 ### 2. Main Page
 - Terdapat **dua navbar**:  
-  - Navbar pertama: ikon 🐾 (*Favorite Pets*), **Sign Up**, dan **Login**.  
+  - Navbar pertama: ikon paw (*Favorite Pets*), **Sign Up**, dan **Login**.  
   - Navbar kedua: kategori **Dogs & Puppies, Cats & Kittens, Other Pets, Pet Foods, Pet Cages, Pet Toys**.  
 - Bagian tengah: gambar utama, *search bar*, serta tombol ikon **Dog, Cat, dan Paw (Other Pets)**.  
 - Bagian bawah: tulisan **Available Pets** dengan foto hewan (anjing, kucing, rubah, kelinci) yang dapat ditekan untuk melihat detail.  
@@ -23,7 +23,7 @@ PawFetch Match adalah platform adopsi hewan peliharaan dan pembelian perlengkapa
 - Pengguna bisa menelusuri daftar hewan atau produk berdasarkan kategori.  
 
 ### 4. Favorite Pets
-- Tekan ikon 🐾 di navbar pertama untuk menuju halaman **Favorite Pets**.  
+- Tekan ikon paw di navbar pertama untuk menuju halaman **Favorite Pets**.  
 - Halaman ini menampilkan hewan/produk yang sudah ditandai sebagai favorit.  
 
 ### 5. Adopsi atau Pembelian
@@ -37,6 +37,16 @@ PawFetch Match adalah platform adopsi hewan peliharaan dan pembelian perlengkapa
 - Isi formulir data yang tersedia.  
 - Lanjutkan ke proses pembayaran **ongkos kirim (ongkir)** jika diperlukan.  
 - Setelah pembayaran berhasil, akan muncul **popup konfirmasi** bahwa adopsi/pembelian berhasil.  
+
+### 7. Profil
+- Setelah berhasil Login atau Sign Up, tombol **Login** dan **Sign Up** di navbar kanan akan berubah menjadi nama pengguna beserta foto profil.  
+- Jika menekan profil tersebut, kamu akan diarahkan ke halaman **Profile Page**.  
+- Di halaman ini, kamu bisa:  
+  - Mengubah foto profil dengan menekan profile picture.  
+  - Mengedit informasi pribadi seperti nama, alamat, dan tanggal lahir.  
+- Terdapat dua tombol utama:  
+  - **History** → menampilkan daftar pesanan yang sudah dilakukan dengan tiga status: Dikemas, Dikirim, dan Selesai.  
+  - **Favorite** → menampilkan kembali daftar hewan atau barang yang telah kamu favoritkan.  
 
 ## Kontribusi Anggota
 - Rebeca: Membuat Halaman web bagian Homepage, Favorite, Dogs & puppies, Github

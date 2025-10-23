@@ -94,6 +94,11 @@ form input {
   cursor: pointer;
 }
 
+.btn1 a {
+  text-decoration: none;
+  color: white;
+}
+
 .btn:hover {
   background: #444;
 }

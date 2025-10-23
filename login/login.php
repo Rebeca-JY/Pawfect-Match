@@ -2,13 +2,19 @@
 include 'db_connect.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $email_or_phone = $_POST['email_or_phone'];
+  $email = $_POST['email'];
   $password = $_POST['password'];
 
-  // cari user berdasarkan email atau nomor hp
-  $sql = "SELECT * FROM users WHERE email=? OR phone=?";
+  // validasi format email
+  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo "❌ Format email tidak valid. Pastikan mengandung '@' dan domain yang benar.";
+    exit();
+  }
+
+  // cari user berdasarkan email
+  $sql = "SELECT * FROM users WHERE email = ?";
   $stmt = $conn->prepare($sql);
-  $stmt->bind_param("ss", $email_or_phone, $email_or_phone);
+  $stmt->bind_param("s", $email);
   $stmt->execute();
   $result = $stmt->get_result();
 
@@ -22,10 +28,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       header("Location: /Homepage/Homepage.html");
       exit();
     } else {
-      echo "Password salah!";
+      echo "❌ Password salah!";
     }
   } else {
-    echo "Akun tidak ditemukan!";
+    echo "⚠️ Akun tidak ditemukan!";
   }
+
+  $stmt->close();
 }
+$conn->close();
 ?>

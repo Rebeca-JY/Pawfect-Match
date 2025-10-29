@@ -1,12 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "root";  
-$password = "";      
-$dbname = "pawfect_match";
+$connection = new mysqli("localhost", "root", "", "pawfect_match");
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-  die("Koneksi gagal: " . $conn->connect_error);
+if ($connection->connect_error) {
+    die("Connection failed: " . $connection->connect_error);
 }
 ?>

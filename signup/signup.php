@@ -20,12 +20,13 @@
         <h2 style="font-size: 45px; font-weight: bold;">Create Account</h2>
         <p class="login-text">Have an account? <a href="/login/login.html">Log In</a></p>
 
-        <form id="signupForm">
-          <input type="text" placeholder="Email or Phone Number" required>
-          <input type="password" placeholder="Password" required>
-          <input type="password" placeholder="Confirm Password" required>
-          <button type="submit" class="btn">Sign Up</button>
-        </form>
+        <form id="signupForm" method="POST" action="../action/signup.php">
+          <input type="text" name="email" placeholder="Email or Phone Number" required>
+          <input type="password" name="password" placeholder="Password" required>
+          <input type="password" name="confirm" placeholder="Confirm Password" required>
+          <button type="submit" name="register" class="btn">Sign Up</button>
+</form>
+
 
         <div class="divider">or</div>
 

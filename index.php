@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Pawfect-Match</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../homepage/index.css">
 </head>
 <body>
   <!-- Navbar -->
@@ -14,7 +14,7 @@
 
   <div class="menu-section">
     <a href="/fav/fav.html"><img src="../foto/paww.png" alt="Hamburger Menu" class="btn-img hamburger-btn"></a>
-    <a href="/signup/signup.html" class="signup-btn"><span>Sign Up</span></a>
+    <a href="/signup/signup.php" class="signup-btn"><span>Sign Up</span></a>
     <a href="/login/login.html" class="login-btn"><span>Log In</span></a>
   </div>
 </div>

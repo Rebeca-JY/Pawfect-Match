@@ -1,40 +1,47 @@
-<?php
-include 'db_connect.php';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pawfect Match - Log In</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="container1">
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $email = $_POST['email'];
-  $password = $_POST['password'];
+    <div class="left-panel1">
+      <img src="../foto/paw.png" alt="Pawfect Match Logo" class="logo-img1">
+    </div>
 
-  // validasi format email
-  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo "❌ Format email tidak valid. Pastikan mengandung '@' dan domain yang benar.";
-    exit();
-  }
+     <div class="signup-container1">
+  <a href="/Homepage/Homepage.html" class="close-btn1">&times;</a>
+     </div>
 
-  // cari user berdasarkan email
-  $sql = "SELECT * FROM users WHERE email = ?";
-  $stmt = $conn->prepare($sql);
-  $stmt->bind_param("s", $email);
-  $stmt->execute();
-  $result = $stmt->get_result();
+    <div class="right-panel1">
+      <div class="form-box1">
+        <h2 style="font-size: 45px; font-weight: bold;">Log In</h2>
+        <p class="login-text1">Dont have an account?<a href="/signup/signup.html">Login</a></p>
 
-  if ($result->num_rows > 0) {
-    $user = $result->fetch_assoc();
+        <form id="signupForm1"  action="../action/login.php" method="POST">
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit" class="btn1"><a href="../Homepage/Homepage.html"></a>Sign Up</button>
+        </form>
 
-    if (password_verify($password, $user['password'])) {
-      session_start();
-      $_SESSION['user_id'] = $user['id'];
-      $_SESSION['email'] = $user['email'];
-      header("Location: /Homepage/Homepage.html");
-      exit();
-    } else {
-      echo "❌ Password salah!";
-    }
-  } else {
-    echo "⚠️ Akun tidak ditemukan!";
-  }
+        <div class="divider1">or</div>
 
-  $stmt->close();
-}
-$conn->close();
-?>
+          <div class="social-btns1">
+          <button class="google1">
+            <img src="../foto/google.png" alt="Google">
+            <span>Google</span>
+          </button>
+
+
+          <button class="facebook1">
+            <img src="../foto/fb.png" alt="Facebook">
+             <span>Facebook</span>
+  </button>
+</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

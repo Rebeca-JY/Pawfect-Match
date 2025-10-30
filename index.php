@@ -15,7 +15,7 @@
   <div class="menu-section">
     <a href="/fav/fav.html"><img src="../foto/paww.png" alt="Hamburger Menu" class="btn-img hamburger-btn"></a>
     <a href="/signup/signup.php" class="signup-btn"><span>Sign Up</span></a>
-    <a href="/login/login.html" class="login-btn"><span>Log In</span></a>
+    <a href="/login/login.php" class="login-btn"><span>Log In</span></a>
   </div>
 </div>
 
@@ -106,8 +106,8 @@
     <div class="footer-links">
       <h2>Company</h2>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="/home/home.php">Home</a></li>
+        <li><a href="/about/about.php">About</a></li>
       </ul>
     </div>
 

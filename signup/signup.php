@@ -18,7 +18,7 @@
     <div class="right-panel">
       <div class="form-box">
         <h2 style="font-size: 45px; font-weight: bold;">Create Account</h2>
-        <p class="login-text">Have an account? <a href="/login/login.html">Log In</a></p>
+        <p class="login-text">Have an account? <a href="../login/login.php">Log In</a></p>
 
         <form id="signupForm" method="POST" action="../action/signup.php">
           <input type="text" name="email" placeholder="Email or Phone Number" required>

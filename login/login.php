@@ -18,13 +18,14 @@
     <div class="right-panel1">
       <div class="form-box1">
         <h2 style="font-size: 45px; font-weight: bold;">Log In</h2>
-        <p class="login-text1">Dont have an account?<a href="/signup/signup.html">Login</a></p>
+        <p class="login-text1">Dont have an account?<a href="../signup/signup.php">Sign Up</a></p>
 
-        <form id="signupForm1"  action="../action/login.php" method="POST">
+        <form id="loginForm" action="../action/login.php" method="POST">
           <input type="email" name="email" placeholder="Email" required>
-          <input type="password" placeholder="Password" required>
-          <button type="submit" class="btn1"><a href="../Homepage/Homepage.html"></a>Sign Up</button>
+          <input type="password" name="password" placeholder="Password" required>
+          <button type="submit" name="login" class="btn1">Log In</button>
         </form>
+
 
         <div class="divider1">or</div>
 

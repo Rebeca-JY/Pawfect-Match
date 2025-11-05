@@ -1,3 +1,4 @@
+
 /* Reset dasar */
 * {
   box-sizing: border-box;
@@ -38,6 +39,11 @@ body {
 .brand-logo {
   height: 3.125rem; /* 50px */
   width: auto;
+}
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 0.9375rem; /* Matches your original menu-section gap */
 }
 
 /* The parent container for the buttons */
@@ -159,7 +165,8 @@ a {
   align-items: center;
   flex-grow: 1;
   max-width: 37.5rem; /* 600px */
-} 
+  gap: 0.9375rem; /* 15px */
+}
 
 .search-box input {
   flex: 1;
@@ -384,3 +391,198 @@ h2 {
     width: 10rem; /* 160px */
   }
 }
+
+
+
+.fav-text {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+.fav-textbot {
+  text-align: center; /* Tambahkan properti ini */
+}
+
+.fav-textbot h3 {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+.btn-check {
+  display: inline-block;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  border-radius: 1.25rem;
+  border: 0.04rem solid;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Tidak perlu text-align di sini karena sudah ditangani oleh parent */
+}
+
+.btn-check:hover {
+  background-color: #957B65;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Favorite page */
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+/* Kiri */
+.card-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-left img {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.card-info {
+  text-align: left;
+}
+
+.card-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1em;
+}
+
+.card-info p {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.3;
+}
+
+/* Kanan */
+.card-right-group {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px; /* jarak antara lokasi dan tombol */
+  min-width: 250px;
+}
+
+/* Lokasi */
+.card-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.card-location img {
+  width: 28px;
+  height: 28px;
+}
+
+/* Tombol */
+.card-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 20px;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+  text-align: center;
+  min-width: 90px;
+}
+
+.btn-adopt {
+  background-color: white;
+  color: black;
+}
+
+.btn-adopt:hover {
+  background-color: #af894c;
+  color: white;
+  border-color: #af894c;
+}
+
+.btn-cancel {
+  background-color: black;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: red;
+  color: white;
+  border-color: red;
+}
+
+
+
+/* Responsive untuk layar kecil */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .card-left {
+    width: 100%;
+  }
+
+  .card-right-group {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .card-location {
+    font-size: 14px;
+  }
+
+  .card-buttons {
+    flex-direction: row; /* tombol jadi sejajar di mobile */
+    gap: 10px;
+  }
+
+  .btn {
+    min-width: auto;
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+}
+
+
+

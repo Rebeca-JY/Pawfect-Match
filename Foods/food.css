@@ -159,7 +159,6 @@ a {
   align-items: center;
   flex-grow: 1;
   max-width: 37.5rem; /* 600px */
-  gap: 0.9375rem; /* 15px */
 }
 
 .search-box input {

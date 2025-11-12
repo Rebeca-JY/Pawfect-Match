@@ -2,32 +2,11 @@
 <html lang="en">
 <head>
     <title>Pawfect-Match</title>
-    <link rel="stylesheet" href="../homepage/index.css">
+    <link rel="stylesheet" href="../Homepage/index.css">
 </head>
 <body>
-  <!-- Navbar -->
-    <div class="navbar-top">
-  <div class="logo-section">
-    <a href="/Homepage/Homepage.html">
-    <img src="../foto/pawfect.png" alt="Pawfect-Match" class="brand-logo"></a>
-  </div>
-
-  <div class="menu-section">
-    <a href="/fav copy/no fav.html"><img src="../foto/paww.png" alt="Hamburger Menu" class="btn-img hamburger-btn"></a>
-    <a href="/signup/signup.php" class="signup-btn"><span>Sign Up</span></a>
-    <a href="/login/login.html" class="login-btn"><span>Log In</span></a>
-
-  </div>
-</div>
-
-<div class="navbar-bottom">
-  <a href="/cage/cage.html"><h2>Pet cages</h2></a>
-  <a href="/Dogs/dogs.html"><h2>Dogs & Puppies</h2></a>
-  <a href="/Cats/cats.html"><h2>Cats & Kittens</h2></a>
-  <a href="/Foods/food.html"><h2>Pet Foods</h2></a>
-  <a href="/toys/toys.html"><h2>Pet Toys</h2></a>
-  <a href="/other/other.html"><h2>Other Pets</h2></a>
-</div>
+  
+  <?php include '../components/header.php';?>
 
 <!-- Body bagian search -->
   <div class="hero">
@@ -46,15 +25,15 @@
   <div class="navbarbody"></div>
 
   <div class="cards">
-    <a href="dogs.html" class="card">
+    <a href="dogs.php" class="card">
       <img src="../foto/Dog.png" alt="Dogs">
     </a>
 
-    <a href="other.html" class="card">
+    <a href="other.php" class="card">
       <img src="../foto/other.png" alt="Other Pets">
     </a>
 
-    <a href="cats.html" class="card">
+    <a href="cats.php" class="card">
       <img src="../foto/cat.png" alt="Cats">
     </a>
   </div>

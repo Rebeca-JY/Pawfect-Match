@@ -17,12 +17,12 @@ if (isset($_POST['register'])) {
         $passwordHashed = password_hash($password, PASSWORD_BCRYPT);
         $query = "INSERT INTO users (email, password) VALUES (?, ?)";
 
-        $stmt = $connection->prepare($query);
+        $stmt = $conn->prepare($query);
         $stmt->bind_param('ss', $email, $passwordHashed);
         $stmt->execute();
 
         if ($stmt->affected_rows > 0) {
-            header('Location: ../index.php');
+            header('Location: ../Homepage/homepage.php');
             exit;
         } else {
             echo "

@@ -6,31 +6,7 @@
 </head>
 <body>
     
-  <!-- Navbar -->
-    <div class="navbar-top">
-  <div class="logo-section">
-    <a href="/Homepage/homepage.html">
-      <img src="../foto/pawfect.png" alt="Pawfect-Match" class="brand-logo">
-    </a>
-  </div>
-
-  <div class="btn-group">
-    <a href="#">
-      <img src="../foto/paww.png" alt="Hamburger Menu" class="btn-img hamburger-btn">
-    </a>
-    <span style="color: white; font-size: larger;" >Marsha</span>
-  </div>
-</div>
-
-<div class="navbar-bottom">
-  <h2>Pet cages</h2>
-  <a href="/Dogs/dogs.html"><h2>Dogs & Puppies</h2></a>
-  <a href="/Cats/cats.html"><h2>Cats & Kittens</h2></a>
-  <a href="/Foods/food.html"><h2>Pet Foods</h2></a>
-  <a href="/toys/toys.html"><h2>Pet Toys</h2></a>
-  <a href="/other/other.html"><h2>Other Pets</h2></a>
-</div>
-
+ <?php include '../components/header.php';?>
 
 <div class="fav-text">
   <h1>Favorite Pets</h1>

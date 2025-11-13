@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($gambar4) move_uploaded_file($_FILES['gambar4']['tmp_name'], $target_dir . $gambar4);
 
     // Simpan data ke database
-    $stmt = $conn->prepare("INSERT INTO hewan_users (nama_pengirim, deskripsi_hewan, no_hp, gambar1, gambar2, gambar3, gambar4) VALUES (?, ?, ?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO hewan_user (nama_pengirim, deskripsi_hewan, no_hp, gambar1, gambar2, gambar3, gambar4) VALUES (?, ?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("sssssss", $nama_pengirim, $deskripsi_hewan, $no_hp, $gambar1, $gambar2, $gambar3, $gambar4);
 
     if ($stmt->execute()) {

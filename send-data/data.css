@@ -145,6 +145,7 @@ textarea {
   border-radius: 0.375rem;
   padding: 0.625rem;
   font-size: 0.875rem;
+  width: 40rem;
   outline: none;
 }
 
@@ -154,14 +155,15 @@ textarea {
 }
 
 .upload-section {
-  position: relative;
-  top: 3rem;
   display: grid;
   grid-template-columns: repeat(2, 7.5rem);
   gap: 1.25rem;
 }
 
 .upload-box {
+  position: relative;
+  left: 43.5rem;
+  bottom: 23.5rem;
   width: 7.5rem;
   height: 7.5rem;
   background-color: #8b6c53;

@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (password_verify($password, $user['password'])) {
       session_start();
       $_SESSION['user'] = $user;
-      header("Location: /Homepage/Homepage.php");
+      header("Location: ../index.php");
       exit();
     } else {
      echo "<script>
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </script>";
     }
   } else {
-    echo "⚠️ Akun tidak ditemukan!";
+    echo " alert('⚠️ Akun tidak ditemukan!)";
   }
 
   $stmt->close();
@@ -64,7 +64,7 @@ $conn->close();
     <div class="right-panel1">
       <div class="form-box1">
         <h2 style="font-size: 45px; font-weight: bold;">Log In</h2>
-        <p class="login-text1">Dont have an account?<a href="/signup/signup.html">Sign Up</a></p>
+        <p class="login-text1">Dont have an account?<a href="/signup/signup.php">Sign Up</a></p>
 
         <form id="signupForm1" method="POST">
           <input type="email" name="email" placeholder="Email" required>

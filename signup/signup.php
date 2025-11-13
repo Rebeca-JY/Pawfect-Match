@@ -12,13 +12,13 @@
     </div>
 
      <div class="signup-container">
-  <a href="/Homepage/Homepage.html" class="close-btn">&times;</a>
+  <a href="../index.php" class="close-btn">&times;</a>
      </div>
 
     <div class="right-panel">
       <div class="form-box">
         <h2 style="font-size: 45px; font-weight: bold;">Create Account</h2>
-        <p class="login-text">Have an account? <a href="/login/login.html">Log In</a></p>
+        <p class="login-text">Have an account? <a href="/login/loginn.php">Log In</a></p>
 
         <form id="signupForm" method="POST" action="../action/signup.php">
           <input type="text" name="email" placeholder="Email or Phone Number" required>

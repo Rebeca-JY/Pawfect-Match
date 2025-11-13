@@ -22,7 +22,7 @@ if (isset($_POST['register'])) {
         $stmt->execute();
 
         if ($stmt->affected_rows > 0) {
-            header('Location: ../Homepage/homepage.php');
+            header('Location: ../index.php');
             exit;
         } else {
             echo "

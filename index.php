@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
     <title>Pawfect-Match</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/Homepage/index.css">
 </head>
 <body>
 
-  <?php include '../components/header.php';?>
+  <?php include 'components/header.php'; ?>
 
-  
 <!-- Body bagian search -->
   <div class="hero">
     <div class="overlay">
@@ -26,15 +25,15 @@
   <div class="navbarbody"></div>
 
   <div class="cards">
-    <a href="dogs.html" class="card">
+    <a href="dogs.php" class="card">
       <img src="../foto/Dog.png" alt="Dogs">
     </a>
 
-    <a href="other.html" class="card">
+    <a href="other.php" class="card">
       <img src="../foto/other.png" alt="Other Pets">
     </a>
 
-    <a href="cats.html" class="card">
+    <a href="cats.php" class="card">
       <img src="../foto/cat.png" alt="Cats">
     </a>
   </div>

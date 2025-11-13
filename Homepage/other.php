@@ -1,3 +1,10 @@
+<?php
+include('../Config/db-connect.php');
+
+$result = $conn->query("SELECT nama_pengirim, deskripsi_hewan, gambar1 FROM hewan_user");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +31,7 @@
     <button class="search-btn">
       <img src="../foto/search.png" alt="Search">
     </button>
-    <button class="send-btn">Send Pet Data</button>
+    <button class="send-btn"><a href="../send-data/data.php">Send Pet Data</a></button>
   </div>
 </div>
 
@@ -114,6 +121,45 @@
     <div class="card-caption">Platinum Fox</div>
   </div>
 </div>
+
+<div class="card-container">
+  <?php
+  include '../Config/db-connect.php';
+
+  $query = "SELECT * FROM hewan_user";
+  $result = mysqli_query($conn, $query);
+
+  if ($result && mysqli_num_rows($result) > 0) {
+      while ($row = $result->fetch_assoc()) {
+          // Use null coalescing to avoid passing NULL to htmlspecialchars
+          $gambar1 = htmlspecialchars($row['gambar1'] ?? '');
+          $nama_pengirim = htmlspecialchars($row['nama_pengirim'] ?? '');
+          $deskripsi_hewan = htmlspecialchars($row['deskripsi_hewan'] ?? '');
+
+          echo "<div class='pet-card'>";
+          if (!empty($gambar1)) {
+              echo "<img src='../foto/" . $gambar1 . "' alt='Foto Hewan'>";
+          } else {
+              echo "<div class='no-image'>No Image</div>";
+          }
+          echo "<h3>$deskripsi_hewan</h3>";
+          echo "<p>Dikirim oleh: $nama_pengirim</p>";
+          echo "</div>";
+      }
+      $conn->close();
+  } else {
+      echo "<p>Belum ada data hewan yang dikirim.</p>";
+  }
+  ?>
+</div>
+
+
+
+    ?>
+  </div>
+</div>
+
+
 
 
 <!-- footer -->

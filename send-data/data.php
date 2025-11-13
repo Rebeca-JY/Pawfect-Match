@@ -5,57 +5,63 @@
   <link rel="stylesheet" href="data.css">
 </head>
 <body>
- 
-<?php include '../components/header.php';?>
 
-  <div class="container">
-    <h1>Send Data</h1>
-    <div class="form-wrapper">
-      <form class="form">
-        <label for="nama">Nama Pengirim</label>
-        <input type="text" id="nama" name="nama">
+<?php include '../components/header.php'; ?>
 
-        <label for="alamat">Alamat</label>
-        <input type="text" id="alamat" name="alamat">
+<div class="container">
+  <h1>Send Data</h1>
+  <div class="form-wrapper">
+    <form class="form" method="POST" action="insert-data.php" enctype="multipart/form-data">
+      <label for="nama">Nama Pengirim</label>
+      <input type="text" id="nama" name="nama_pengirim" required>
 
-        <label for="nohp">No HP (yang dapat dihubungi)</label>
-        <input type="text" id="nohp" name="nohp">
+      <label for="alamat">Alamat</label>
+      <input type="text" id="alamat" name="alamat" required>
 
-        <label for="deskripsi">Deskripsi Hewan</label>
-        <textarea id="deskripsi" name="deskripsi"></textarea>
+      <label for="nohp">No HP (yang dapat dihubungi)</label>
+      <input type="text" id="nohp" name="no_hp" required>
 
-        <div class="button-group">
-          <button type="submit" class="send">Send</button>
-          <button type="button" class="cancel">Cancel</button>
-        </div>
-      </form>
+      <label for="deskripsi">Deskripsi Hewan</label>
+      <textarea id="deskripsi" name="deskripsi_hewan" required></textarea>
+
+      <div class="button-group">
+        <button type="submit" class="send">Send</button>
+        <button type="button" class="cancel" onclick="window.location.href='../Homepage/other.php'">Cancel</button>
+      </div>
 
       <div class="upload-section">
-        <div class="upload-box">+</div>
-        <div class="upload-box">+</div>
-        <div class="upload-box">+</div>
-        <div class="upload-box">+</div>
+        <label class="upload-box">
+          + 
+          <input type="file" name="gambar1" hidden>
+        </label>
+        <label class="upload-box">
+          + 
+          <input type="file" name="gambar2" hidden>
+        </label>
+        <label class="upload-box">
+          + 
+          <input type="file" name="gambar3" hidden>
+        </label>
+        <label class="upload-box">
+          + 
+          <input type="file" name="gambar4" hidden>
+        </label>
       </div>
-    </div>
-  </div>
-   
-<footer class="footer">
-  <div class="footer-content">
-   
-    <div class="footer-top">
-  <!-- Logo -->
-  <div class="footer-logo">
-    <img src="../foto/paw.png" alt="Pawfect Match Logo">
- 
-  </div>
- 
-  <!-- Chart -->
-  <div class="footer-chart">
-    <img src="../foto/statistic.png" alt="Statistics">
+    </form>
   </div>
 </div>
- 
-    <!-- Company Links -->
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="../foto/paw.png" alt="Pawfect Match Logo">
+      </div>
+      <div class="footer-chart">
+        <img src="../foto/statistic.png" alt="Statistics">
+      </div>
+    </div>
+
     <div class="footer-links">
       <h2>Company</h2>
       <ul>
@@ -63,8 +69,7 @@
         <li><a href="#">About</a></li>
       </ul>
     </div>
- 
-    <!-- Members -->
+
     <div class="footer-members">
       <h2>Member</h2>
       <ul>
@@ -73,8 +78,7 @@
         <li>Rebeca</li>
       </ul>
     </div>
- 
-    <!-- Social Media -->
+
     <div class="footer-social">
       <h4>Social Media</h4>
       <div class="social-icons">
@@ -84,15 +88,11 @@
         <a href="#"><img src="../foto/tele.png" alt="Telegram"></a>
       </div>
     </div>
- 
   </div>
- 
-  <!-- Copyright -->
+
   <div class="footer-bottom">
     <p>© 2025 PawFect-Match</p>
   </div>
 </footer>
-</body>
-</html>
 </body>
 </html>

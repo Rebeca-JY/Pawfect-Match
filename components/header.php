@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-include '../Config/db-connect.php';
+include(__DIR__ . '/../Config/db-connect.php');
 session_start();
 
 // Cek apakah user sudah login

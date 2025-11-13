@@ -21,7 +21,7 @@
     <button class="search-btn">
       <img src="../foto/search.png" alt="Search">
     </button>
-    <button class="send-btn">Send Pet Data</button>
+    <button class="send-btn"><a href="../send-data/data.php">Send Pet Data</a></button>
   </div>
 </div>
 

@@ -22,12 +22,12 @@
 
 
 <div class="navbar-bottom">
-    <a href="/cage/cage.html"><h2>Pet cages</h2></a>
-    <a href="/Dogs/dogs.html"><h2>Dogs & Puppies</h2></a>
-    <a href="/Cats/cats.html"><h2>Cats & Kittens</h2></a>
-    <a href="/Foods/food.html"><h2>Pet Foods</h2></a>
-    <a href="/toys/toys.html"><h2>Pet Toys</h2></a>
-    <a href="/other/other.html"><h2>Other Pets</h2></a>
+    <a href="../../cage/cage.php"><h2>Pet cages</h2></a>
+    <a href="/Dogs/dogs.php"><h2>Dogs & Puppies</h2></a>
+    <a href="/Cats/cats.php"><h2>Cats & Kittens</h2></a>
+    <a href="/Foods/food.php"><h2>Pet Foods</h2></a>
+    <a href="/toys/toys.php"><h2>Pet Toys</h2></a>
+    <a href="/other/other.php"><h2>Other Pets</h2></a>
   </div>
 
 
@@ -53,7 +53,7 @@
           </div>
 
           <div class="button-container">
-              <a href="../../payment/payment 1.html"><button class="btn btn-adopt">Adopt</button></a>
+              <a href="../../payment/metode.html"><button class="btn btn-adopt">Adopt</button></a>
               <a href="../../Cats/cats.html"><button class="btn btn-cancel">Cancel</button></a>
           </div>
       </div>

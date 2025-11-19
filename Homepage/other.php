@@ -141,7 +141,7 @@ $result = $conn->query("SELECT nama_pengirim, deskripsi_hewan, gambar1 FROM hewa
           } else {
               echo "<div class='no-image'>No Image</div>";
           }
-          echo implode(' ', array_slice(explode(' ', $row['deskripsi_hewan']), 0, 2));
+          echo implode(' ', array_slice(explode(' ', $row['deskripsi_hewan']), 1, 2));
           echo "</div>";
       }
       $conn->close();

@@ -24,7 +24,7 @@ $user = $_SESSION['user'] ?? null;
     <!-- NAVBAR LOGIN -->
     <div class="navbar-top">
         <div class="logo-section">
-            <a href="/Homepage/homepage.php">
+            <a href="/index.php">
                 <img src="../foto/pawfect.png" class="brand-logo">
             </a>
         </div>

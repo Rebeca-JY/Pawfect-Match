@@ -5,14 +5,9 @@ ini_set('display_errors', 1);
 include(__DIR__ . '/../Config/db-connect.php');
 session_start();
 
-// Cek apakah user sudah login
-if (isset($_SESSION['user'])) {
-    $user = $_SESSION['user'];
-    $isLogin = true;
-} else {
-    $user = null;
-    $isLogin = false;
-}
+// Cek login pakai SESSION user_id (BENAR)
+$isLogin = isset($_SESSION['user_id']);
+$user = $_SESSION['user'] ?? null;
 ?>
 
 <!DOCTYPE html>
@@ -26,20 +21,23 @@ if (isset($_SESSION['user'])) {
 <body>
 
 <?php if ($isLogin): ?>
+    <!-- NAVBAR LOGIN -->
     <div class="navbar-top">
         <div class="logo-section">
             <a href="/Homepage/homepage.php">
-                <img src="../foto/pawfect.png" alt="Pawfect-Match" class="brand-logo">
+                <img src="../foto/pawfect.png" class="brand-logo">
             </a>
         </div>
 
         <div class="menu-section">
             <a href="/Homepage/fav.php">
-                <img src="../foto/paww.png" alt="Hamburger Menu" class="btn-img hamburger-btn">
+                <img src="../foto/paww.png" class="btn-img hamburger-btn">
             </a>
-            <!-- Contoh menampilkan email user jika sudah login -->
-            <!-- <span style="color: white; font-size: larger;"><?= htmlspecialchars($user['email'] ?? '') ?></span> -->
-            <a href="/logout/logout.php" class="logout-btn"><span>Log Out</span></a>
+
+            <!-- MASUK PROFILE -->
+            <a href="/login/profile.php" class="profile-btn">
+                <span><?= htmlspecialchars($user['name']); ?></span>
+            </a>
         </div>
     </div>
 
@@ -53,30 +51,31 @@ if (isset($_SESSION['user'])) {
     </div>
 
 <?php else: ?>
+    <!-- NAVBAR BELUM LOGIN -->
     <div class="navbar-top">
         <div class="logo-section">
-            <a href="/Homepage/homepage.html">
-                <img src="../foto/pawfect.png" alt="Pawfect-Match" class="brand-logo">
+            <a href="/Homepage/homepage.php">
+                <img src="../foto/pawfect.png" class="brand-logo">
             </a>
         </div>
 
-        ...
-<div class="menu-section">
-    <a href="/fav/fav.html">
-        <img src="../foto/paww.png" alt="Hamburger Menu" class="btn-img hamburger-btn">
-    </a>
+        <div class="menu-section">
+            <a href="/fav/fav.html">
+                <img src="../foto/paww.png" class="btn-img hamburger-btn">
+            </a>
+
             <a href="/signup/signup.php" class="signup-btn"><span>Sign Up</span></a>
             <a href="/login/loginn.php" class="login-btn"><span>Log In</span></a>
         </div>    
     </div>
 
     <div class="navbar-bottom">
-        <a href="/cage/cage.html"><h2>Pet cages</h2></a>
-        <a href="/Dogs/dogs.html"><h2>Dogs & Puppies</h2></a>
-        <a href="/Cats/cats.html"><h2>Cats & Kittens</h2></a>
-        <a href="/Foods/food.html"><h2>Pet Foods</h2></a>
-        <a href="/toys/toys.html"><h2>Pet Toys</h2></a>
-        <a href="/other/other.html"><h2>Other Pets</h2></a>
+        <a href="/Homepage/cage.php"><h2>Pet cages</h2></a>
+        <a href="/Homepage/dogs.php"><h2>Dogs & Puppies</h2></a>
+        <a href="/Homepage/cats.php"><h2>Cats & Kittens</h2></a>
+        <a href="/Homepage/food.php"><h2>Pet Foods</h2></a>
+        <a href="/Homepage/toys.php"><h2>Pet Toys</h2></a>
+        <a href="/Homepage/other.php"><h2>Other Pets</h2></a>
     </div>
 <?php endif; ?>
 

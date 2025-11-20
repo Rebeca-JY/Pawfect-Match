@@ -21,6 +21,7 @@
         <p class="login-text">Have an account? <a href="/login/loginn.php">Log In</a></p>
 
         <form id="signupForm" method="POST" action="../action/signup.php">
+          <input type="text" name="name" placeholder="Nama Lengkap" required>
           <input type="text" name="email" placeholder="Email or Phone Number" required>
           <input type="password" name="password" placeholder="Password" required>
           <input type="password" name="confirm" placeholder="Confirm Password" required>

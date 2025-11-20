@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawfect Match Payment</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      background-color: white;
+    }
+
+    .left {
+      background-color: #9C8267;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      color: white;
+      text-align: center;
+    }
+
+    .left img {
+      width: 80%;
+      max-width: 350px;
+      margin-bottom: 30px;
+    }
+
+    .right {
+      width: 60%;
+      padding: 40px 80px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 25px;
+      right: 35px;
+      font-size: 30px;
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
+    }
+
+    .qr-box {
+      margin-top: 80px;
+      border: 4px solid #333;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .qr-box img {
+      width: 280px;
+      height: 280px;
+    }
+
+    .amount {
+      font-size: 35px;
+      margin-top: 20px;
+      color: #444;
+      font-weight: 600;
+    }
+
+    .payment-buttons {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px;
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .payment-buttons button {
+        width: 12rem;
+        background-color: #4f4f4f;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 30px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .payment-buttons button:hover {
+        transition: ease-in-out 0.3s;
+         background-color: #3e3e3e;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="left">
+    <img src="../foto/paw.png" alt="Pawfect Logo">
+  </div>
+
+  <div class="right">
+
+    <a href="metode.html" class="close-btn">&times;</a>
+
+    <div class="qr-box">
+      <img src="../foto/qr.jpg" alt="QR Code">
+    </div>
+
+    <div class="amount">Rp30.000</div>
+
+    <div class="payment-buttons">
+     <a href="payment 1.html"><button>Dana</button></a>
+     <a href="payment 1.html"><button>Gopay</button></a>
+     <a href="payment 1.html"><button>OVO</button></a>
+
+     <a href="payment 1.html"><button>BCA</button></a>
+     <a href="payment 1.html"><button>ShopeePay</button></a>
+     <a href="payment 1.html"><button>BRI</button></a>
+
+     <a href="payment 1.html"><button>Syariah</button></a>
+     <a href="payment 1.html"><button>BNI</button></a>
+     <a href="payment 1.html"><button>Bank Mega</button></a>
+
+  </div>
+
+</body>
+</html>

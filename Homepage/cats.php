@@ -52,7 +52,7 @@
     <div class="card-caption">Siberian</div>
   </div>
   <div class="card">
-    <a href="../Info/Info-produk-hewan/mainecoon.html"><img src="../foto/cat-Maine-Coon.jpg" alt="Maine Coon"></a>
+    <a href="../Info/Info-produk-hewan/mainecoon.php"><img src="../foto/cat-Maine-Coon.jpg" alt="Maine Coon"></a>
     <div class="card-caption">Maine Coon</div>
   </div>
   <div class="card">

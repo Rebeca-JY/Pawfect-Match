@@ -131,7 +131,6 @@ $result = $conn->query("SELECT nama_pengirim, deskripsi_hewan, gambar1 FROM hewa
 
   if ($result && mysqli_num_rows($result) > 0) {
       while ($row = $result->fetch_assoc()) {
-          // Use null coalescing to avoid passing NULL to htmlspecialchars
           $gambar1 = htmlspecialchars($row['gambar1'] ?? '');
           $nama_pengirim = htmlspecialchars($row['nama_pengirim'] ?? '');
           $deskripsi_hewan = htmlspecialchars($row['deskripsi_hewan'] ?? '');
@@ -142,8 +141,7 @@ $result = $conn->query("SELECT nama_pengirim, deskripsi_hewan, gambar1 FROM hewa
           } else {
               echo "<div class='no-image'>No Image</div>";
           }
-          echo "<h3>$deskripsi_hewan</h3>";
-          echo "<p>Dikirim oleh: $nama_pengirim</p>";
+          echo implode(' ', array_slice(explode(' ', $row['deskripsi_hewan']), 1, 2));
           echo "</div>";
       }
       $conn->close();
@@ -152,10 +150,6 @@ $result = $conn->query("SELECT nama_pengirim, deskripsi_hewan, gambar1 FROM hewa
   }
   ?>
 </div>
-
-
-
-    ?>
   </div>
 </div>
 

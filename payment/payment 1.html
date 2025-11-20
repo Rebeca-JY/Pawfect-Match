@@ -18,7 +18,6 @@
       background-color: white;
     }
 
-    /* Left side with image logo */
     .left {
       background-color: #9C8267;
       color: white;
@@ -32,13 +31,11 @@
     }
 
     .left img {
-     width: 100rem;        /* perbesar ukuran logo */
-     max-width: 80%;      /* biar tetap responsif di layar kecil */
-    height: auto;
-     margin-bottom: 30px;
+      width: 80%;
+      max-width: 350px;
+      margin-bottom: 30px;
     }
 
-    /* Right section */
     .right {
       width: 60%;
       position: relative;
@@ -50,12 +47,12 @@
 
     .close-btn {
       position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 28px;
-      cursor: pointer;
+      top: 25px;
+      right: 35px;
+      font-size: 30px;
       text-decoration: none;
-      color: #333;
+      color: black;
+      cursor: pointer;
     }
 
     .right h2 {
@@ -88,10 +85,12 @@
     }
 
     .qr-btn {
+      width: 47.5rem;
       background-color: #666;
       color: white;
       border: none;
       border-radius: 50px;
+      margin-top: 1rem;
       padding: 10px 40px;
       font-size: 18px;
       cursor: pointer;
@@ -116,23 +115,33 @@
     }
   </style>
 </head>
+
+<script>
+function sendPayment() {
+  alert("Harap tunggu 10 detik, sistem sedang memproses pembayaran...");
+
+  setTimeout(function () {
+    window.location.href = "success.html"; 
+  }, 10000); 
+}
+</script>
+
 <body>
 
-  <!-- LEFT SECTION (logo image) -->
   <div class="left">
     <img src="../foto/paw.png" alt="Pawfect Match Logo">
   </div>
 
-  <!-- RIGHT SECTION -->
   <div class="right">
-    <a href="../Info/Info-produk-hewan/mainecoon.html" class="close-btn">&times;</a>
-    <h2>Rp15.890.000</h2>
+    <a href="../Info/Info-produk-hewan/mainecoon.php" class="close-btn">&times;</a>
+    <h2>Rp20.000</h2>
 
     <label for="nama">Nama Pengirim</label>
     <input type="text" id="nama" placeholder="">
 
     <p class="rekening">Rekening : 92947526617556684</p>
-    <button class="qr-btn">QR</button>
+    <button class="qr-btn" onclick="sendPayment()">Send</button>
+    <a href="qr.html"><button class="qr-btn">QR</button></a>
 
     <div class="payment">Payment : <span></span></div>
   </div>

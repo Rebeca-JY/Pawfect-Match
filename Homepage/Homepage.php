@@ -1,38 +1,81 @@
-<?php
-if (isset($_GET['search'])) {
-  $query = strtolower(trim($_GET['search']));
-  if (strpos($query, 'dog') !== false || strpos($query, 'anjing') !== false || strpos($query, 'golden') !== false) {
-    header("Location: ../Homepage/dogs.php");
-    exit();
-  } elseif (strpos($query, 'cat') !== false || strpos($query, 'kucing') !== false) {
-    header("Location: ../Homepage/cats.php");
-    exit();
-  } elseif (strpos($query, 'bunny') !== false || strpos($query, 'kelinci') !== false || strpos($query, 'other') !== false) {
-    header("Location: ../Homepage/other.php");
-    exit();
-  } else {
-    echo "<script>alert('Hewan tidak ditemukan');</script>";
-  }
-}
-?>
+<script>
+  // ambil elemen input dan tombol
+  const searchInput = document.querySelector('.search-bar input');
+  const searchButton = document.querySelector('.search-bar button');
+
+  // fungsi saat tombol diklik
+  searchButton.addEventListener('click', function () {
+    const query = searchInput.value.toLowerCase().trim();
+
+    // kalau isi input mengandung kata "golden" atau "dog", pindah ke halaman anjing
+    if (query.includes('golden') || query.includes('dog') || query.includes('anjing')) {
+      window.location.href = '../Dogs/dogs.html';
+    } 
+    // kalau mau tambahkan pencarian lain, bisa di sini:
+    else if (query.includes('cat') || query.includes('kucing')) {
+      window.location.href = '../Cats/cats.html';
+    } 
+    else if (query.includes('other') || query.includes('bunny') || query.includes('kelinci')) {
+      window.location.href = '../other/other.html';
+    } 
+    else {
+      alert('Hewan tidak ditemukan, Silakan coba lagi.');
+    }
+  });
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homepage</title>
+</head>
+<body>
+  <h1>Welcome to Pawfect Match 🐾</h1>
+
+
+</body>
+</html>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Pawfect-Match</title>
-    <link rel="stylesheet" href="/Homepage/index.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+  <!-- Navbar -->
+    <div class="navbar-top">
+  <div class="logo-section">
+    <a href="/Homepage/Homepage.html">
+    <img src="../foto/pawfect.png" alt="Pawfect-Match" class="brand-logo"></a>
+  </div>
 
-  <?php include 'components/header.php'; ?>
+  <div class="menu-section">
+    <a href="/fav/fav.html"><img src="../foto/paww.png" alt="Hamburger Menu" class="btn-img hamburger-btn"></a>
+    <a href="/signup/signup.html" class="signup-btn"><span>Sign Up</span></a>
+    <a href="/login/login.html" class="login-btn"><span>Log In</span></a>
+  </div>
+</div>
+
+<div class="navbar-bottom">
+  <h2>Pet cages</h2>
+  <a href="/Dogs/dogs.html"><h2>Dogs & Puppies</h2></a>
+  <a href="/Cats/cats.html"><h2>Cats & Kittens</h2></a>
+  <h2>Pet Foods</h2>
+  <h2>Pet Toys</h2>
+  <a href="/other/other.html"><h2>Other Pets</h2></a>
+</div>
 
 <!-- Body bagian search -->
   <div class="hero">
     <div class="overlay">
-     <form action="" method="GET" class="search-bar">
-      <input type="text" name="search" placeholder="What animal do you want?" required>
-      <button type="submit">
-        <img src="../foto/search.png" alt="search">
-      </button>
+     <div class="search-bar">
+  <input type="text" placeholder="What animal do you want?">
+  <button type="button">
+    <img src="../foto/search.png" alt="search">
+  </button>
+</div>
 </form>
       </div>
       <h1>Welcome to Pawfect-Match!</h1>
@@ -43,15 +86,15 @@ if (isset($_GET['search'])) {
   <div class="navbarbody"></div>
 
   <div class="cards">
-    <a href="dogs.php" class="card">
+    <a href="dogs.html" class="card">
       <img src="../foto/Dog.png" alt="Dogs">
     </a>
 
-    <a href="other.php" class="card">
+    <a href="other.html" class="card">
       <img src="../foto/other.png" alt="Other Pets">
     </a>
 
-    <a href="cats.php" class="card">
+    <a href="cats.html" class="card">
       <img src="../foto/cat.png" alt="Cats">
     </a>
   </div>

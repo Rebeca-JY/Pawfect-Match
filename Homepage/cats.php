@@ -7,7 +7,6 @@
 </head>
 <body>
   <?php include '../components/header.php';?>
-
 <div class="search-bar">
   <!-- Logo + Judul -->
   <div class="logo-title">

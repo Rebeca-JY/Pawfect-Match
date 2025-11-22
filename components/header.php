@@ -42,12 +42,8 @@
         </div>
 
         <div class="navbar-bottom">
-            <a href="/Homepage/cages.php"><h2>Pet cages</h2></a>
-            <a href="/Homepage/dogs.php"><h2>Dogs & Puppies</h2></a>
-            <a href="/Homepage/cats.php"><h2>Cats & Kittens</h2></a>
-            <a href="/Homepage/food.php"><h2>Pet Foods</h2></a>
-            <a href="/Homepage/toys.php"><h2>Pet Toys</h2></a>
-            <a href="/Homepage/other.php"><h2>Other Pets</h2></a>
+            <a href="/Homepage/catalog.php"><h2>Pets</h2></a>
+            
         </div>
 
     <?php else: ?>
@@ -70,12 +66,7 @@
         </div>
 
         <div class="navbar-bottom">
-            <a href="/Homepage/cage.php"><h2>Pet cages</h2></a>
-            <a href="/Homepage/dogs.php"><h2>Dogs & Puppies</h2></a>
-            <a href="/Homepage/cats.php"><h2>Cats & Kittens</h2></a>
-            <a href="/Homepage/food.php"><h2>Pet Foods</h2></a>
-            <a href="/Homepage/toys.php"><h2>Pet Toys</h2></a>
-            <a href="/Homepage/other.php"><h2>Other Pets</h2></a>
+            <a href="/Homepage/catalog.php"><h2>Pets</h2></a>
         </div>
     <?php endif; ?>
 

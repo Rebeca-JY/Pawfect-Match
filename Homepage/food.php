@@ -35,8 +35,8 @@
     <div class="card-caption">Cesar beef food</div>
   </div>
   <div class="card">
-    <img src="../foto/petopia-full-pack-dog-food.png" alt="Petopia Full pack dog food">
-    <div class="card-caption">Petopia Full pack dog food</div>
+    <a href="../info/petopia.php"><img src="../foto/petopia-full-pack-dog-food.png" alt="Petopia Full pack dog food">
+    <div class="card-caption">Petopia Full pack dog food</div></a>
   </div>
   <div class="card">
     <img src="../foto/perro-dog-food.jpg" alt="Perro Dog Food ( NO PORK )">

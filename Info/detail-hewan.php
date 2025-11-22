@@ -1,3 +1,21 @@
+<?php
+require_once '../Config/db-connect.php';
+
+$hewanId = $_GET['id'];
+
+
+$query = 'select * from hewan where id = ?';
+
+$stmt = $conn->prepare($query);
+$stmt->bind_param('i', $hewanId);
+$stmt->execute();
+
+$result = $stmt->get_result();
+$hewan = $result->fetch_assoc();
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,26 +34,25 @@
     <button class="fav-btn">
         ♥
     </button>
-      <img src="../../foto/cat-Maine-Coon.jpg" alt="Main Coon" class="cat-image">
+      <img src="/<?= $hewan['gambar']?>" alt="<?= $hewan['nama']?>" class="cat-image">
 
       <div class="card-content">
           <div class="text-content">
-              <h1>Hito</h1>
-              <p><strong>Pemilik:</strong> Marsha Lenathea Lapian</p>
-              <p><strong>Type:</strong> Maine Coon</p>
-              <p><strong>Age:</strong> 5 Months</p>
+              <h1>
+                <?= $hewan['nama']?>
+              </h1>
+              <p><strong>Pemilik: </strong><?= $hewan['pemilik']?></p>
+              <p><strong>Type: </strong><?= $hewan['tipe']?></p>
+              <p><strong>Age: </strong><?= $hewan['umur']?></p>
               
               <p class="description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate...
+                  <?= $hewan['deskripsi']?>
               </p>
           </div>
 
           <div class="button-container">
               <a href="../../payment/metode.html"><button class="btn btn-adopt">Adopt</button></a>
-              <a href="../Homepage/cats.php"><button class="btn btn-cancel">Cancel</button></a>
+              <a href="../Homepage/catalog.php"><button class="btn btn-cancel">Cancel</button></a>
           </div>
       </div>
   </div>

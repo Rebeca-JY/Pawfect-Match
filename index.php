@@ -79,7 +79,7 @@ if (isset($_GET['search'])) {
     </div>
   </div>
 
-  <a href="/other/other.html"><button class="more-button">More Pets ➝</button></a>
+  <a href="/Homepage/other.php"><button class="more-button">More Pets ➝</button></a>
 </div>
 
 <!-- footer -->

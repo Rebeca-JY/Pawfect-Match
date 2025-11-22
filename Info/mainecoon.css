@@ -248,6 +248,41 @@ a {
 }
 
 
+/* Favorite button */
+.fav-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  background: white;
+  color: #b80e0e;
+  font-size: 24px;
+  font-weight: bold;
+
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+  transition: 0.2s ease;
+}
+
+/* Hover effect */
+.fav-btn:hover {
+  background: #b80e0e;
+  color: white;
+}
+
+.adoption-card {
+    position: relative; /* penting */
+}
 
 
 

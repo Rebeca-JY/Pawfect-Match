@@ -9,30 +9,7 @@
 
     </head>
 <body>
-      <!-- Navbar -->
-<div class="navbar-top">
-  <div class="logo-section">
-    <a href="/Homepage/homepage.html">
-    <img src="../../foto/pawfect.png" alt="Pawfect-Match" class="brand-logo"></a>
-  </div>
-
-  <div class="menu-section">
-    <a href="/fav/fav.html"><img src="../../foto/paww.png" alt="Hamburger Menu" class="btn-img hamburger-btn"></a>
-    <a href="/signup/signup.html" class="signup-btn"><span>Sign Up</span></a>
-    <a href="/login/login.html" class="login-btn"><span>Log In</span></a>
-  </div>
-</div>
-
-
-<div class="navbar-bottom">
-    <a href="/cage/cage.html"><h2>Pet cages</h2></a>
-    <a href="/Dogs/dogs.html"><h2>Dogs & Puppies</h2></a>
-    <a href="/Cats/cats.html"><h2>Cats & Kittens</h2></a>
-    <a href="/Foods/food.html"><h2>Pet Foods</h2></a>
-    <a href="/toys/toys.html"><h2>Pet Toys</h2></a>
-    <a href="/other/other.html"><h2>Other Pets</h2></a>
-  </div>
-
+      <?php include '../components/header.php';?>
 
 
     <!-- Import Tailwind CSS -->

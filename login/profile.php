@@ -1,71 +1,47 @@
 <?php
 session_start();
-<<<<<<< HEAD
 
-// Jika belum login → redirect
+// Redirect jika belum login
 if (!isset($_SESSION['user'])) {
     header("Location: login/loginn.php");
     exit();
 }
 
 $user = $_SESSION['user'];
-$nama = $user['username'] ?? $user['email']; 
-=======
-include '../Config/db-connect.php';
+// Mengambil 'username' atau 'email' dari sesi user untuk ditampilkan
+$nama_tampilan = $user['username'] ?? $user['email'] ?? "Pengguna Tanpa Nama";
 
-// Cek login
-if (!isset($_SESSION['user_id'])) {
-    header("Location: loginn.php");
-    exit();
+// Logika koneksi DB dan pengambilan nama user yang kedua,
+// yang menggunakan $_SESSION['user_id'], **berpotensi redundant**
+// atau **salah tempat** jika data yang diperlukan sudah ada di $_SESSION['user'].
+// Saya akan menggunakan $nama_tampilan yang sudah diambil dari sesi login.
+
+/*
+// Jika Anda memang **perlu** mengambil nama dari DB berdasarkan user_id,
+// pastikan 'user_id' sudah tersimpan di sesi setelah login, misalnya:
+if (isset($_SESSION['user_id'])) {
+    include '../Config/db-connect.php';
+    $user_id = $_SESSION['user_id'];
+    $query = mysqli_query($conn, "SELECT name FROM users WHERE id='$user_id'");
+    $data = mysqli_fetch_assoc($query);
+    $nama_tampilan = $data['name'] ?? $nama_tampilan; // Timpa jika nama dari DB ditemukan
 }
-
-$user_id = $_SESSION['user_id'];
-
-// Ambil nama user
-$query = mysqli_query($conn, "SELECT name FROM users WHERE id='$user_id'");
-$data = mysqli_fetch_assoc($query);
-$name = $data['name'] ?? "User";
->>>>>>> 9f49fe91022fe8a93de491dd2f6ed66f4a49a7c7
+*/
 ?>
 
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<<<<<<< HEAD
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pawfect Match - Profile</title>
-=======
-    <title>PawFect Match - Profile</title>
->>>>>>> 9f49fe91022fe8a93de491dd2f6ed66f4a49a7c7
     <link rel="stylesheet" href="profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<<<<<<< HEAD
-<div class="container">
-
-    <div class="top-section">
-        <div class="logo">
-            <span>PawFect<br>Match</span>
-        </div>
-        <a href="logout.php" class="close-btn">✕</a>
-    </div>
-
-    <div class="profile">
-        <div class="avatar"></div>
-
-        <!-- Tampilkan nama user -->
-        <h2 class="username">
-            <?php echo htmlspecialchars($nama); ?>
-        </h2>
-    </div>
-
-    <div class="form-section">
-        <div class="field">
-            <label>Edit Nama</label>
-=======
 <div class="profile-card">
-
+    
     <div class="header">
         <div class="logo"><h2>PawFect<br>Match</h2></div>
         <button class="close-btn">&times;</button>
@@ -73,72 +49,48 @@ $name = $data['name'] ?? "User";
 
     <div class="profile-info">
         <div class="avatar"></div>
-        <h2><?= htmlspecialchars($name); ?></h2>
+        <h2><?= htmlspecialchars($nama_tampilan); ?></h2>
     </div>
 
     <div class="form-section">
+        
         <label>Edit Nama</label>
         <div class="input-group">
->>>>>>> 9f49fe91022fe8a93de491dd2f6ed66f4a49a7c7
-            <input type="text">
+            <input type="text" placeholder="Masukkan Nama Baru">
             <button class="done-btn">Done</button>
         </div>
 
-<<<<<<< HEAD
-        <div class="field">
-            <label>Tanggal Lahir</label>
-=======
         <label>Tanggal Lahir</label>
         <div class="input-group">
->>>>>>> 9f49fe91022fe8a93de491dd2f6ed66f4a49a7c7
-            <input type="text">
-            <button class="done-btn">Done</button>
+            <input type="date"> <button class="done-btn">Done</button>
         </div>
 
-<<<<<<< HEAD
-        <div class="field">
-            <label>Alamat</label>
-=======
         <label>Alamat</label>
         <div class="input-group">
->>>>>>> 9f49fe91022fe8a93de491dd2f6ed66f4a49a7c7
-            <textarea></textarea>
+            <textarea placeholder="Masukkan Alamat"></textarea>
             <button class="done-btn">Done</button>
         </div>
     </div>
-
-<<<<<<< HEAD
+    
     <div class="side-buttons">
         <button class="side-btn">🐾Favorite</button>
         <button class="side-btn">History</button>
     </div>
 
-    <div class="logout">
+    <div class="logout-container">
         <a href="logout.php">
-            <button class="logout-btn">Sign Out</button>
+            <button class="signout-btn">Sign Out</button>
         </a>
     </div>
 
 </div>
 
-=======
-    <div class="button-section">
-        <button class="fav-btn">Favorite</button>
-        <button class="history-btn">History</button>
-    </div>
-
-    <form method="post" action="signout.php">
-        <button class="signout-btn">Sign Out</button>
-    </form>
-
-</div>
-
 <script>
 document.querySelector(".close-btn").addEventListener("click", () => {
+    // Ganti dengan halaman yang sesuai setelah ditutup
     window.location.href = "/index.php"; 
 });
 </script>
 
->>>>>>> 9f49fe91022fe8a93de491dd2f6ed66f4a49a7c7
 </body>
 </html>

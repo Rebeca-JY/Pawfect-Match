@@ -2,13 +2,13 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 session_start();
-$_SESSION['user'] = $user;
-header("Location: ../profile.php");
-exit();
+// $_SESSION['user'] = $user;
+// header("Location: ../profile.php");
+// exit();
 
 include '../Config/db-connect.php';
 
-session_start();
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'] ?? '';

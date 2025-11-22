@@ -6,35 +6,16 @@
 
 </head>
 <body>
-      <!-- Navbar -->
-<div class="navbar-top">
-  <div class="logo-section">
-    <a href="/Homepage/Homepage.html">
-    <img src="../../foto/pawfect.png" alt="Pawfect-Match" class="brand-logo"></a>
-  </div>
-
-  <div class="menu-section">
-    <a href="/fav/fav.html"><img src="../../foto/paww.png" alt="Hamburger Menu" class="btn-img hamburger-btn"></a>
-    <a href="/signup/signup.html" class="signup-btn"><span>Sign Up</span></a>
-    <a href="/login/login.html" class="login-btn"><span>Log In</span></a>
-  </div>
-</div>
-
-
-<div class="navbar-bottom">
-    <a href="../../cage/cage.php"><h2>Pet cages</h2></a>
-    <a href="/Dogs/dogs.php"><h2>Dogs & Puppies</h2></a>
-    <a href="/Cats/cats.php"><h2>Cats & Kittens</h2></a>
-    <a href="/Foods/food.php"><h2>Pet Foods</h2></a>
-    <a href="/toys/toys.php"><h2>Pet Toys</h2></a>
-    <a href="/other/other.php"><h2>Other Pets</h2></a>
-  </div>
-
+      <?php include '../components/header.php';?>
 
 
 <!-- Isi -->
 <div class="main-content-wrapper">
   <div class="adoption-card">
+        <!-- Favorite icon -->
+    <button class="fav-btn">
+        ♥
+    </button>
       <img src="../../foto/cat-Maine-Coon.jpg" alt="Main Coon" class="cat-image">
 
       <div class="card-content">
@@ -54,7 +35,7 @@
 
           <div class="button-container">
               <a href="../../payment/metode.html"><button class="btn btn-adopt">Adopt</button></a>
-              <a href="../../Cats/cats.html"><button class="btn btn-cancel">Cancel</button></a>
+              <a href="../Homepage/cats.php"><button class="btn btn-cancel">Cancel</button></a>
           </div>
       </div>
   </div>

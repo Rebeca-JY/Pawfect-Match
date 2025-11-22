@@ -57,7 +57,7 @@
 
     <div class="card-buttons">
       <span class="btn btn-adopt">Adopt</span>
-      <span class="btn btn-cancel">Cancel</span>
+      <a href="index.php"><span class="btn btn-cancel">Cancel</span></a>
     </div>
   </div>
 </div>

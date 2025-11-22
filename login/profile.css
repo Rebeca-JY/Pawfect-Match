@@ -1,275 +1,162 @@
-body {
+/* Reset dan Font */
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #fff;
+    padding: 0;
+    box-sizing: border-box;
+    /* Pastikan font Poppins tersedia atau ganti dengan Arial jika tidak */
+    font-family: 'Poppins', Arial, sans-serif;
+}
+ 
+body {
+    height: 100vh;
+    background-color: #f8f8f8; /* Latar belakang abu-abu muda */
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Pusatkan kartu profil */
+    align-items: flex-start; /* Mulai dari atas */
+    padding-top: 50px; /* Jarak dari atas layar */
 }
 
-.container {
-    width: 900px;
-    background: #fff;
+/* Kartu Profil Utama */
+.profile-card {
+    position: relative; /* Penting untuk penempatan side-buttons */
+    width: 900px; /* Lebar total kartu profil */
+    max-width: 95%; 
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Top Section */
-.top-section {
-    background: #9b7b60;
-    padding: 20px;
+/* Header (Logo + Tombol Tutup) */
+.header {
+    background-color: #9c7a5f;
+    color: white;
+    padding: 20px 30px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-
+ 
+.logo h2 {
+    font-size: 1.5rem; /* Ukuran font logo */
+    line-height: 1.2;
+    font-weight: 500;
+}
+ 
 .close-btn {
-    background: transparent;
+    background: none;
     border: none;
-    font-size: 28px;
     color: white;
+    font-size: 2rem;
     cursor: pointer;
 }
 
-/* Avatar + Username */
-.profile {
+/* Informasi Profil (Avatar + Nama/Email) */
+.profile-info {
+    background-color: #9c7a5f;
+    color: white;
+    padding: 20px;
     text-align: center;
-    background: #9b7b60;
-    padding-bottom: 40px;
 }
-
+ 
 .avatar {
     width: 120px;
     height: 120px;
-    margin: auto;
-    background: #3d3d3d;
+    background-color: #443a32;
     border-radius: 50%;
+    margin: 0 auto 10px; /* Jarak bawah */
 }
-
-.username {
-    color: white;
-    font-size: 28px;
-    margin-top: 15px;
+ 
+.profile-info h2 {
+    font-size: 1.5rem; /* Ukuran nama/email */
+    font-weight: 600;
 }
-
-/* Form Section */
+ 
+/* Bagian Formulir */
 .form-section {
     padding: 30px 40px;
+    text-align: left;
 }
-
-.field {
-    margin-bottom: 20px;
-}
-
-label {
+ 
+.form-section label {
     display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+ 
+.input-group {
+    display: flex;
+    align-items: center;
     margin-bottom: 5px;
 }
-
-input, textarea {
-    width: 70%;
+ 
+.input-group input,
+.input-group textarea {
+    flex: 1;
     padding: 10px;
-    background: #e8e8e8;
+    border: none; /* Menghilangkan border */
+    background-color: #e8e8e8; /* Latar belakang abu-abu muda */
     border-radius: 5px;
-    border: none;
+    outline: none;
+    font-size: 1rem;
 }
 
-textarea {
-    height: 80px;
+.input-group input[type="date"] {
+    /* Gaya khusus untuk input date jika diperlukan */
 }
-
+ 
+.input-group textarea {
+    resize: none;
+    height: 80px; /* Ketinggian textarea lebih besar */
+}
+ 
 .done-btn {
     margin-left: 10px;
-    background: #3d3d3d;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 10px;
+    background-color: #9c7a5f; /* Menggunakan warna coklat yang sama */
     color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 15px;
     cursor: pointer;
+    font-weight: 500;
 }
 
-/* Side Buttons */
+/* Tombol Samping (Favorite & History) */
 .side-buttons {
     position: absolute;
-    top: 280px;
-    right: 100px;
+    top: 200px; /* Sesuaikan posisi vertikal */
+    right: -140px; /* Geser ke kanan di luar kartu */
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+    /* Untuk tampilan di layar kecil, Anda mungkin perlu menyembunyikan
+       atau memindahkannya ke bawah kartu profil dengan media query */
 }
 
 .side-btn {
     width: 120px;
     height: 90px;
-    background: #9b7b60;
+    background: #9c7a5f;
     color: white;
     border: none;
     border-radius: 20px;
-    font-size: 18px;
+    font-size: 1rem;
     cursor: pointer;
 }
 
-/* Logout */
-.logout {
+/* Tombol Sign Out */
+.logout-container {
     padding: 20px 40px;
     text-align: center;
 }
 
-.logout-btn {
-    background: #3d3d3d;
+.signout-btn {
+    background-color: #3d3d3d;
     color: white;
     padding: 12px 25px;
     border-radius: 10px;
     border: none;
-    font-size: 18px;
+    font-size: 1.1rem;
     cursor: pointer;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
- 
-body {
-  height: 100vh;
-  background-color: #f8f8f8;
-}
- 
- 
-.header {
-  background-color: #9c7a5f;
-  color: white;
-  padding: 0.625rem 0.9375rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
- 
-.logo h2 {
-  font-size: 1rem;
-  line-height: 1.2;
-}
- 
-.close-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.75rem;
-  cursor: pointer;
-}
- 
-.profile-info {
-  background-color: #9c7a5f;
-  color: white;
-  padding: 1.25rem;
-}
- 
-.avatar {
-  width: 10rem;
-  height: 10rem;
-  background-color: #443a32;
-  border-radius: 50%;
-  margin: 0 auto 5rem;
-}
- 
-.profile-info h2 {
-  font-size: 1.25rem;
-  font-weight: 600;
-}
- 
- 
-.form-section {
-  padding: 1.25rem;
-  text-align: left;
-}
- 
-.form-section label {
-  display: block;
-  margin-bottom: 0.3125rem;
-  font-weight: 500;
-  color: #333;
-}
- 
-.input-group {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.9375rem;
-}
- 
-.input-group input,
-.input-group textarea {
-  flex: 1;
-  padding: 0.5rem;
-  border: 0.0625rem solid #ddd;
-  border-radius: 0.375rem;
-  outline: none;
-}
- 
-.input-group textarea {
-  resize: none;
-  height: 3.125rem;
-}
- 
-.done-btn {
-  margin-left: 0.5rem;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 0.375rem;
-  padding: 0.375rem 0.625rem;
-  cursor: pointer;
-}
- 
-.button-section {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 1.25rem;
-}
- 
-.fav-btn,
-.history-btn {
-  width: 40%;
-  padding: 0.625rem;
-  background-color: #9c7a5f;
-  color: white;
-  border: none;
-  border-radius: 0.625rem;
-  font-weight: 500;
-  cursor: pointer;
-  font-size: large;
-}
- 
-/* Ubah CSS ini */
-.signout-btn {
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  padding: 0.625rem 1.25rem;
-  margin-bottom: 1.25rem;
-  cursor: pointer;
-}
- 
-/* Menjadi seperti ini */
-.signout-btn {
-  display: block; /* Jadikan tombol sebagai elemen block */
-  margin: 0 auto 1.25rem auto; /* Atur margin atas/bawah dan auto untuk kiri/kanan */
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  padding: 0.625rem 1.25rem;
-  cursor: pointer;
-  font-size: large;
-}
-
-.close-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.75rem;
-  cursor: pointer;
-}
-
-.close-btn:hover {
-  color: red;
-  transform: scale(1.2); /* opsional, biar sedikit membesar */
+    width: 30%; /* Buat lebih lebar */
+    min-width: 150px;
 }

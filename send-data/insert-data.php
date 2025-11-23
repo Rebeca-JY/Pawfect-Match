@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sssssss", $nama_pengirim, $deskripsi_hewan, $no_hp, $gambar1, $gambar2, $gambar3, $gambar4);
 
     if ($stmt->execute()) {
-        echo "<script>alert('Data berhasil dikirim!'); window.location.href='../Homepage/other.php';</script>";
+        echo "<script>alert('Data berhasil dikirim!'); window.location.href='../Homepage/catalog.php';</script>";
     } else {
         echo "Terjadi kesalahan: " . $stmt->error;
     }

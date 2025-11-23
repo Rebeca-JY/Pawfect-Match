@@ -14,6 +14,7 @@ while ($hewan = $results->fetch_assoc()) {
   $daftarHewan[] = $hewan;
 }
 
+$result = $conn->query("SELECT nama_pengirim, deskripsi_hewan, gambar1 FROM hewan_user");
 
 ?>
 
@@ -54,6 +55,36 @@ while ($hewan = $results->fetch_assoc()) {
   <?php endforeach?>
 </div>
 
+<?php
+require_once '../Config/db-connect.php';
+
+$query = 'select * from hewan_user';
+
+$daftarHewan = [];
+
+$stmt = $conn->prepare($query);
+$stmt->execute();
+
+$results = $stmt->get_result();
+
+while ($hewan = $results->fetch_assoc()) {
+  $daftarHewan[] = $hewan;
+}
+
+$result = $conn->query("SELECT nama_pengirim, deskripsi_hewan, gambar1 FROM hewan_user");
+
+?>
+
+<div class="card-container">
+  <?php foreach($daftarHewan as $hewan):?>
+    <a href="/info/detail-hewan.php?id=<?= $hewan['id']?>" class="card">
+      <img src="../foto/<?= $hewan['gambar1']?>" alt="<?= $hewan['nama_pengirim']?>">
+      <div class="card-caption">
+        <?= $hewan['nama_pengirim']?>
+      </div>
+    </a>
+  <?php endforeach?>
+</div>
 
 <!-- footer -->
 

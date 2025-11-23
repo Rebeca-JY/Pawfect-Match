@@ -43,15 +43,15 @@ if (isset($_GET['search'])) {
   <div class="navbarbody"></div>
 
   <div class="cards">
-    <a href="/Homepage/dogs.php" class="card">
+    <a href="/Homepage/catalog.php" class="card">
       <img src="../foto/Dog.png" alt="Dogs">
     </a>
 
-    <a href="/Homepage/other.php" class="card">
+    <a href="/Homepage/catalog.php" class="card">
       <img src="../foto/other.png" alt="Other Pets">
     </a>
 
-    <a href="/Homepage/cats.php" class="card">
+    <a href="/Homepage/catalog.php" class="card">
       <img src="../foto/cat.png" alt="Cats">
     </a>
   </div>
@@ -79,7 +79,7 @@ if (isset($_GET['search'])) {
     </div>
   </div>
 
-  <a href="/Homepage/other.php"><button class="more-button">More Pets ➝</button></a>
+  <a href="/Homepage/catalog.php"><button class="more-button">More Pets ➝</button></a>
 </div>
 
 <!-- footer -->

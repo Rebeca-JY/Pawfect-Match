@@ -66,7 +66,7 @@
 
 <div class="fav-textbot">
   <h3>Ups, You have no more favorite pet! Add more pets and find your dream pets!</h3>
-  <a href="other.php"><span class="btn-check">Check</span></a>
+  <a href="catalog.php"><span class="btn-check">Check</span></a>
 </div>
 
 

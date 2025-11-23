@@ -73,12 +73,12 @@ if (isset($_SESSION['user_id'])) {
     </div>
     
     <div class="side-buttons">
-        <button class="side-btn">🐾Favorite</button>
+        <a href= "../Homepage/fav.php"><button class="side-btn">🐾Favorite</button></a>
         <button class="side-btn">History</button>
     </div>
 
     <div class="logout-container">
-        <a href="logout.php">
+        <a href="signout.php">
             <button class="signout-btn">Sign Out</button>
         </a>
     </div>

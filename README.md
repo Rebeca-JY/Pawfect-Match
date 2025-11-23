@@ -1,6 +1,6 @@
-# PawFetch Match
+# Pawfect Match
 
-PawFetch Match adalah platform adopsi hewan peliharaan dan pembelian perlengkapan hewan. Dengan tampilan yang ramah pengguna, kamu bisa menjelajahi berbagai kategori hewan, menyimpan favorit, hingga melakukan adopsi atau pembelian dengan mudah.  
+Pawfect Match adalah platform adopsi hewan peliharaan dan pembelian perlengkapan hewan. Dengan tampilan yang ramah pengguna, kamu bisa menjelajahi berbagai kategori hewan, menyimpan favorit, hingga melakukan adopsi atau pembelian dengan mudah.  
 
 ## Cara Menggunakan PawFetch Match
 
@@ -45,12 +45,54 @@ PawFetch Match adalah platform adopsi hewan peliharaan dan pembelian perlengkapa
   - Mengubah foto profil dengan menekan profile picture.  
   - Mengedit informasi pribadi seperti nama, alamat, dan tanggal lahir.  
 - Terdapat satu tombol utama:  
-  - **Favorite** → menampilkan kembali daftar hewan atau barang yang telah kamu favoritkan.  
+  - **Favorite** → menampilkan kembali daftar hewan atau barang yang telah kamu favoritkan.
+ 
+###Fitur Utama
+Pengguna dapat menelusuri hewan peliharaan dari lima kategori utama:
+- Anjing
+- Kucing
+- Kelinci
+- Hamster
+- Rubah
 
+Setiap hewan menampilkan informasi dasar yang jelas dan mudah dipahami:
+- Nama hewan
+- Ras
+- Usia
+- Pemilik (penjual)
+
+Penjual dapat memposting hewan dengan mengisi:
+- Nama penjual
+- Alamat
+- Nomor HP
+- Deskripsi hewan
+- Foto hewan
+
+Favorit
+-Pengguna dapat menyimpan hewan favorit untuk dilihat kembali kapan saja.
+
+### Relasi Antar Tabel
+  1. users dan hewan_user
+Satu user dapat menggunggah banyak hewaan untuk dijual.
+Relasi: one to many
+
+  2. usera, favorite, dan hewan
+Pengguna dapat memfavoritkan hewan default yang disediakan oleh website.
+Relasi: Many-to-Many melalui tabel favorite.
+
+  3. users, favorite, dan hewan_user
+Selain hewan default, pengguna juga dapat memfavoritkan hewan yang diunggah oleh penjual di tabel hewan_user.
+Relasi: Many-to-Many melalui tabel favorite.
+
+  4. hewan dan hewan_user tidak saling berhubungan langsung
+Karena kedua tabel memiliki tujuan dan sumber data yang berbeda:
+    - hewan       = daftar hewan default dari sistem/website
+    - hewan_user  = daftar hewan yang iunggah oleh penjual
+     
 ## Kontribusi Anggota untuk STS
 - Rebeca: Membuat Halaman web bagian Homepage, Favorite, Dogs & puppies, Github
 - Lionel: Membuat Halaman web bagian Signup, Login, Cats & Kittens, Other pets
 - Deven: Membuat semua Design
 
 ## Kontribusi Anggota untuk SAS
-- Di lihat dari excel
+- Di lihat dari excel (tambahan: Deven: back-end favorite, rebeca: back-end info produk dan readme, lionel: bantu back-end rebeca)

@@ -44,11 +44,13 @@ PawFetch Match adalah platform adopsi hewan peliharaan dan pembelian perlengkapa
 - Di halaman ini, kamu bisa:  
   - Mengubah foto profil dengan menekan profile picture.  
   - Mengedit informasi pribadi seperti nama, alamat, dan tanggal lahir.  
-- Terdapat dua tombol utama:  
-  - **History** → menampilkan daftar pesanan yang sudah dilakukan dengan tiga status: Dikemas, Dikirim, dan Selesai.  
+- Terdapat satu tombol utama:  
   - **Favorite** → menampilkan kembali daftar hewan atau barang yang telah kamu favoritkan.  
 
-## Kontribusi Anggota
+## Kontribusi Anggota untuk STS
 - Rebeca: Membuat Halaman web bagian Homepage, Favorite, Dogs & puppies, Github
 - Lionel: Membuat Halaman web bagian Signup, Login, Cats & Kittens, Other pets
 - Deven: Membuat semua Design
+
+## KOntribusi Anggota untuk SAS
+- Di lihat dari excel

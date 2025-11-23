@@ -52,5 +52,5 @@ PawFetch Match adalah platform adopsi hewan peliharaan dan pembelian perlengkapa
 - Lionel: Membuat Halaman web bagian Signup, Login, Cats & Kittens, Other pets
 - Deven: Membuat semua Design
 
-## KOntribusi Anggota untuk SAS
+## Kontribusi Anggota untuk SAS
 - Di lihat dari excel

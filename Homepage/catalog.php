@@ -30,7 +30,7 @@ $result = $conn->query("SELECT nama_pengirim, deskripsi_hewan, gambar1 FROM hewa
 <div class="search-bar">
   <!-- Logo + Judul -->
   <div class="logo-title">
-    <img src="../foto/logocat.png" alt="Cat Logo" class="logo-img">
+    <img src="../foto/logohitam.png" alt="Cat Logo" class="logo-img">
     <h2>Pets</h2>
   </div>
 
@@ -77,7 +77,7 @@ $result = $conn->query("SELECT nama_pengirim, deskripsi_hewan, gambar1 FROM hewa
 
 <div class="card-container">
   <?php foreach($daftarHewan as $hewan):?>
-    <a href="/info/detail-hewan.php?id=<?= $hewan['id']?>" class="card">
+    <a href="/info/detail-hewanuser.php?id=<?= $hewan['id']?>" class="card">
       <img src="../foto/<?= $hewan['gambar1']?>" alt="<?= $hewan['nama_pengirim']?>">
       <div class="card-caption">
         <?= $hewan['nama_pengirim']?>

@@ -115,10 +115,11 @@ h2 {
   flex-direction: column;
   box-shadow: 0 0.375rem 0.75rem rgba(0,0,0,0.3); /* 6px 12px */
   padding: 0.625rem 0.625rem 0 0.625rem; /* 10px */
+  width: fit-content;
 }
 
 .card img {
-  width: 100%;
+  width: 15.5rem;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 0.25rem; /* 4px */

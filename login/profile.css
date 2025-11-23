@@ -3,29 +3,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Pastikan font Poppins tersedia atau ganti dengan Arial jika tidak */
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
  
 body {
     height: 100vh;
-    background-color: #f8f8f8; /* Latar belakang abu-abu muda */
+    background-color: #f8f8f8; 
     display: flex;
-    justify-content: center; /* Pusatkan kartu profil */
-    align-items: flex-start; /* Mulai dari atas */
-    padding-top: 50px; /* Jarak dari atas layar */
+    justify-content: center; 
+    align-items: flex-start; 
+    padding-top: 50px;
 }
 
-/* Kartu Profil Utama */
 .profile-card {
-    position: relative; /* Penting untuk penempatan side-buttons */
-    width: 900px; /* Lebar total kartu profil */
+    position: relative; 
+    width: 900px;
     max-width: 95%; 
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Header (Logo + Tombol Tutup) */
 .header {
     background-color: #9c7a5f;
     color: white;

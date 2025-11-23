@@ -47,7 +47,7 @@ body {
   font-size: 1.375rem; /* 22px */
   font-weight: normal;
   color: #333;
-  margin: 0;
+  margin-top: 2rem;
 }
 
 .search-box {
@@ -164,6 +164,7 @@ h2 {
   color: white;
   padding: 1.875rem 3.125rem; /* 30px 50px */
   font-size: 1.25rem; /* 20px */
+  margin-top: 1.1rem;
 }
 
 .footer-content {
@@ -311,12 +312,13 @@ h2 {
   border: 0.04rem solid;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* Tidak perlu text-align di sini karena sudah ditangani oleh parent */
+  margin-bottom: 3rem;
 }
 
 .btn-check:hover {
   background-color: #957B65;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transition: ease-in-out 0.3s;
 }
 
 
@@ -415,23 +417,35 @@ h2 {
   min-width: 90px;
 }
 
+.delete-btn {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 20px;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+  text-align: center;
+  min-width: 90px;
+}
+
 .btn-adopt {
   background-color: white;
   color: black;
 }
 
 .btn-adopt:hover {
-  background-color: #af894c;
+  background-color: #957B65;
   color: white;
-  border-color: #af894c;
+  border-color: #957B65;
 }
 
-.btn-cancel {
+.delete-btn {
   background-color: black;
   color: white;
 }
 
-.btn-cancel:hover {
+.delete-btn:hover {
   background-color: red;
   color: white;
   border-color: red;

@@ -1,32 +1,14 @@
 <?php
 session_start();
 
-// Redirect jika belum login
 if (!isset($_SESSION['user'])) {
     header("Location: login/loginn.php");
     exit();
 }
 
 $user = $_SESSION['user'];
-// Mengambil 'username' atau 'email' dari sesi user untuk ditampilkan
+
 $nama_tampilan = $user['username'] ?? $user['email'] ?? "Pengguna Tanpa Nama";
-
-// Logika koneksi DB dan pengambilan nama user yang kedua,
-// yang menggunakan $_SESSION['user_id'], **berpotensi redundant**
-// atau **salah tempat** jika data yang diperlukan sudah ada di $_SESSION['user'].
-// Saya akan menggunakan $nama_tampilan yang sudah diambil dari sesi login.
-
-/*
-// Jika Anda memang **perlu** mengambil nama dari DB berdasarkan user_id,
-// pastikan 'user_id' sudah tersimpan di sesi setelah login, misalnya:
-if (isset($_SESSION['user_id'])) {
-    include '../Config/db-connect.php';
-    $user_id = $_SESSION['user_id'];
-    $query = mysqli_query($conn, "SELECT name FROM users WHERE id='$user_id'");
-    $data = mysqli_fetch_assoc($query);
-    $nama_tampilan = $data['name'] ?? $nama_tampilan; // Timpa jika nama dari DB ditemukan
-}
-*/
 ?>
 
 <!DOCTYPE html>
@@ -87,7 +69,6 @@ if (isset($_SESSION['user_id'])) {
 
 <script>
 document.querySelector(".close-btn").addEventListener("click", () => {
-    // Ganti dengan halaman yang sesuai setelah ditutup
     window.location.href = "/index.php"; 
 });
 </script>

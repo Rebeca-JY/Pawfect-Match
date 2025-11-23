@@ -5,6 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nama_pengirim = $_POST['nama_pengirim'];
     $deskripsi_hewan = $_POST['deskripsi_hewan'];
     $no_hp = $_POST['no_hp'];
+    $alamat = $_POST['alamat'];
 
     // Lokasi penyimpanan foto
     $target_dir = "../foto/";
@@ -21,10 +22,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($gambar3) move_uploaded_file($_FILES['gambar3']['tmp_name'], $target_dir . $gambar3);
     if ($gambar4) move_uploaded_file($_FILES['gambar4']['tmp_name'], $target_dir . $gambar4);
 
-    // Simpan data ke database
-    $stmt = $conn->prepare("INSERT INTO hewan_user (nama_pengirim, deskripsi_hewan, no_hp, gambar1, gambar2, gambar3, gambar4) VALUES (?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssssss", $nama_pengirim, $deskripsi_hewan, $no_hp, $gambar1, $gambar2, $gambar3, $gambar4);
-
+   $stmt = $conn->prepare("INSERT INTO hewan_user 
+        (nama_pengirim, deskripsi_hewan, no_hp, alamat, gambar1, gambar2, gambar3, gambar4) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssssss", $nama_pengirim, $deskripsi_hewan, $no_hp, $alamat, $gambar1, $gambar2, $gambar3, $gambar4);
     if ($stmt->execute()) {
         echo "<script>alert('Data berhasil dikirim!'); window.location.href='../Homepage/catalog.php';</script>";
     } else {

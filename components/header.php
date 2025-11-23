@@ -24,7 +24,7 @@
         <!-- NAVBAR LOGIN -->
         <div class="navbar-top">
             <div class="logo-section">
-                <a href="/Homepage/index.php">
+                <a href="/index.php">
                     <img src="/foto/pawfect.png" class="brand-logo">
                 </a>
             </div>

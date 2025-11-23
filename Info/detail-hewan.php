@@ -4,7 +4,7 @@ require_once '../Config/db-connect.php';
 $hewanId = $_GET['id'];
 
 
-$query = 'select * from hewan where id = ?';
+$query = 'SELECT * from hewan where id = ?';
 
 $stmt = $conn->prepare($query);
 $stmt->bind_param('i', $hewanId);
@@ -31,9 +31,13 @@ $hewan = $result->fetch_assoc();
 <div class="main-content-wrapper">
   <div class="adoption-card">
         <!-- Favorite icon -->
-    <button class="fav-btn">
-        ♥
-    </button>
+         
+    <form action="fav-add.php" method="POST">
+        <input type="hidden" name="hewan_id" value="<?= $hewan['id']; ?>">
+        <button type="submit" class="fav-btn">♥</button>
+    </form>
+
+
       <img src="/<?= $hewan['gambar']?>" alt="<?= $hewan['nama']?>" class="cat-image">
 
       <div class="card-content">

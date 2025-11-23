@@ -6,61 +6,54 @@
 </head>
 <body>
     
- <?php include '../components/header.php';?>
+ <?php include '../components/header.php';
+
+  $userId = $_SESSION['user_id'];
+
+  $query = "SELECT h.* FROM hewan_user h
+          JOIN favorite f ON h.id = f.hewan_id
+          WHERE f.user_id = ?";
+  $stmt = $conn->prepare($query);
+  $stmt->bind_param("i", $userId);
+  $stmt->execute();
+  $result = $stmt->get_result();
+ ?>
+ 
 
 <div class="fav-text">
   <h1>Favorite Pets</h1>
 </div>
 
-
-<!-- card 1 -->
+<?php while ($row = $result->fetch_assoc()): ?>
 <div class="card">
+
   <div class="card-left">
-    <img src="../foto/kucing1.jpg" alt="Foto Kucing">
+    <img src="../foto/<?= $row['gambar1'] ?>" alt="">
     <div class="card-info">
-      <h3>Sumedang El Beraq</h3>
-      <p>Pemilik: Marsha Lenathea Lapian</p>
-      <p>Tipe: Kucing Kampung</p>
-      <p>Umur: 5 Bulan</p>
+      <h3><?= $row['nama_pengirim'] ?></h3>
+      <p><?= mb_strimwidth($row['deskripsi_hewan'], 0, 40, '...'); ?></p>
     </div>
   </div>
 
   <div class="card-right-group">
     <div class="card-location">
       <img src="../foto/location.png" alt="Lokasi">
-      <span>Siantan Pride</span>
+      <span><?= $row['alamat'] ?></span>
     </div>
 
     <div class="card-buttons">
-      <span class="btn btn-adopt">Adopt</span>
-      <span class="btn btn-cancel">Cancel</span>
+      <a href="../payment/metode.html"><span class="btn btn-adopt">Adopt</span></a>
+      <a href="delete-fav.php?id=<?= $row['id'] ?>" 
+      onclick="return confirm('Apakah kamu yakin ingin menghapus dari favorite?')"class="delete-btn">Cancel
+</a>
+      </a>
     </div>
   </div>
+
 </div>
+<?php endwhile; ?>
 
-<div class="card">
-  <div class="card-left">
-    <img src="../foto/kucing2.jpg" alt="Foto Kucing">
-    <div class="card-info">
-      <h3>Bobby</h3>
-      <p>Pemilik: Prabowo Subianto</p>
-      <p>Tipe: Kucing Planga Plongo</p>
-      <p>Umur: 2 Tahun</p>
-    </div>
-  </div>
 
-  <div class="card-right-group">
-    <div class="card-location">
-      <img src="../foto/location.png" alt="Lokasi">
-      <span>Jakarta Sanak Sikit</span>
-    </div>
-
-    <div class="card-buttons">
-      <span class="btn btn-adopt">Adopt</span>
-      <a href="index.php"><span class="btn btn-cancel">Cancel</span></a>
-    </div>
-  </div>
-</div>
 
 
 

@@ -47,7 +47,7 @@ Pawfect Match adalah platform adopsi hewan peliharaan dan pembelian perlengkapan
 - Terdapat satu tombol utama:  
   - **Favorite** → menampilkan kembali daftar hewan atau barang yang telah kamu favoritkan.
  
-###Fitur Utama
+### Fitur Utama
 Pengguna dapat menelusuri hewan peliharaan dari lima kategori utama:
 - Anjing
 - Kucing

@@ -76,7 +76,7 @@ Favorit
 Satu user dapat menggunggah banyak hewaan untuk dijual.
 Relasi: one to many
 
-  2. usera, favorite, dan hewan
+  2. users, favorite, dan hewan
 Pengguna dapat memfavoritkan hewan default yang disediakan oleh website.
 Relasi: Many-to-Many melalui tabel favorite.
 

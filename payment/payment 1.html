@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawfect Match Payment</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      background-color: white;
+    }
+
+    .left {
+      background-color: #9C8267;
+      color: white;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .left img {
+      width: 80%;
+      max-width: 350px;
+      margin-bottom: 30px;
+    }
+
+    .right {
+      width: 60%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px 80px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 25px;
+      right: 35px;
+      font-size: 30px;
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
+    }
+
+    .right h2 {
+      font-size: 36px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      background-color: #d9d9d9;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .rekening {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .qr-btn {
+      width: 47.5rem;
+      background-color: #666;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      margin-top: 1rem;
+      padding: 10px 40px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .qr-btn:hover {
+      background-color: #555;
+    }
+
+    .payment {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .payment span {
+      width: 15px;
+      height: 15px;
+      display: inline-block;
+      background-color: red;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
+<script>
+function sendPayment() {
+  alert("Harap tunggu 10 detik, sistem sedang memproses pembayaran...");
+
+  setTimeout(function () {
+    window.location.href = "success.html"; 
+  }, 10000); 
+}
+</script>
+
+<body>
+
+  <div class="left">
+    <img src="../foto/paw.png" alt="Pawfect Match Logo">
+  </div>
+
+  <div class="right">
+    <a href="../Info/Info-produk-hewan/mainecoon.php" class="close-btn">&times;</a>
+    <h2>Rp20.000</h2>
+
+    <label for="nama">Nama Pengirim</label>
+    <input type="text" id="nama" placeholder="">
+
+    <p class="rekening">Rekening : 92947526617556684</p>
+    <button class="qr-btn" onclick="sendPayment()">Send</button>
+    <a href="qr.html"><button class="qr-btn">QR</button></a>
+
+    <div class="payment">Payment : <span></span></div>
+  </div>
+
+</body>
+</html>

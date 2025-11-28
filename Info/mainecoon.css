@@ -1,0 +1,417 @@
+
+/* Reset dasar */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* 1rem = 16px */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+  color: #333;
+}
+
+/* ---------------- Navbar Coklat ---------------- */
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8c7355;
+  padding: 0.625rem 1.25rem; /* 10px 20px */
+}
+
+.navbar-bottom{
+  display: flex;
+}
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem; /* 10px */
+}
+
+.brand-logo {
+  height: 3.125rem; /* 50px */
+  width: auto;
+}
+
+/* The parent container for the buttons */
+.menu-section {
+  display: flex;
+  align-items: center;
+  gap: 0.9375rem; /* 15px */
+}
+
+/* Base styles for the Sign Up and Log In buttons */
+.signup-btn, .login-btn {
+  /* Common button styles */
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px; /* This makes the corners fully rounded */
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  
+  /* Initial state: no fill, just a transparent border and text */
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+/* Hover effect */
+.signup-btn:hover {
+  /* On hover, the background becomes a semi-transparent white */
+  background-color: #333333;
+  
+  /* The border color also becomes a solid white */
+  border: 1px solid #333333;
+
+  /* The text color becomes a solid white */
+  color: #fff;
+}
+
+.login-btn:hover {
+   /* On hover, the background becomes a semi-transparent white */
+  background-color: #ffffff;
+  
+  /* The border color also becomes a solid white */
+  border: 1px solid #ffffff;
+
+  /* The text color becomes a solid white */
+  color: #adadad;
+}
+
+.btn-img {
+  height: 2.5rem; /* 40px */
+  width: auto;
+}
+
+.hamburger-btn {
+  height: 2.5rem; /* 40px */
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  color: inherit;
+}
+
+/* ---------------- Navbar Hitam ---------------- */
+.navbar-bottom {
+  background-color: #1a1a1a;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0.5rem 1rem;
+  height: 1.875rem;
+  gap: 30px; /* Adjust this value as needed for spacing between items */
+}
+
+.navbar-bottom h2 {
+  margin: 0; /* Remove all margin to let the parent container control spacing */
+  color: #fff;
+  font-weight: normal;
+  font-size: 1rem;
+  text-align: flex-start;
+}
+
+
+/* Isi */
+.main-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* fills most of the screen between header & footer */
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+}
+
+
+
+/* The main card container */
+.adoption-card {
+    display: flex;
+    gap: 24px; /* Space between image and content */
+    background-color: #ffffff;
+    border-radius: 20px; /* Rounded corners for the card */
+    padding: 24px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08); /* Soft shadow */
+    max-width: 800px;
+    width: 100%;
+}
+
+/* The cat image */
+.cat-image {
+    width: 250px; /* Fixed width */
+    height: 300px; /* Fixed height to match the image ratio */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    border-radius: 12px; /* Rounded corners for the image */
+    flex-shrink: 0; /* Prevents the image from shrinking */
+}
+
+/* The right-side content area */
+.card-content {
+    display: flex;
+    flex-direction: column; /* Stacks text on top of buttons */
+    flex-grow: 1; /* Takes up the remaining space */
+    min-width: 0; /* Prevents content from overflowing */
+}
+
+.text-content {
+    flex-grow: 1; /* Pushes the buttons to the bottom */
+}
+
+/* Main heading */
+.card-content h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 16px;
+}
+
+/* Paragraph text */
+.card-content p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+/* The "Pemilik:", "Tipe:", etc. labels */
+.card-content p strong {
+    font-weight: 600;
+    color: #000;
+}
+
+/* The "Lorem ipsum" description */
+.description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+/* Container for the buttons */
+.button-container {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end; /* Aligns buttons to the right */
+    margin-top: 24px; /* Space above the buttons */
+}
+
+/* Common button styles */
+.btn {
+  padding: 10px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 50px; /* Pill-shaped buttons */
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* "Adopt" button (outline style) */
+.btn-adopt {
+  background-color: #ffffff;
+  color: #333333;
+  border-color: #333333;
+}
+
+/* Hover effect for Adopt button */
+.btn-adopt:hover {
+  background-color: #8c7355;
+  color: #ffffff;
+  border-color: #8c7355;
+}
+
+/* "Cancel" button (solid style) */
+.btn-cancel {
+  background-color: #333333;
+  color: #ffffff;
+  border-color: #333333;
+}
+
+/* Hover effect for Cancel button */
+.btn-cancel:hover {
+  background-color: #b80e0e;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+
+/* Favorite button */
+.fav-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  background: white;
+  color: #b80e0e;
+  font-size: 24px;
+  font-weight: bold;
+
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+  transition: 0.2s ease;
+}
+
+/* Hover effect */
+.fav-btn:hover {
+  background: #b80e0e;
+  color: white;
+}
+
+.adoption-card {
+    position: relative; /* penting */
+}
+
+
+
+
+
+
+
+
+/* ---------------- Footer ---------------- */
+.footer {
+  background-color: #957B65;
+  color: white;
+  padding: 1.875rem 3.125rem; /* 30px 50px */
+  font-size: 1.25rem; /* 20px */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem; /* 20px */
+  gap: 2rem;
+}
+
+.footer-links h2,
+.footer-members h2,
+.footer-social h2 {
+  margin-bottom: 0.625rem; /* 10px */
+  font-size: 1.5625rem; /* 25px */
+  font-weight: bold;
+  color: white;
+}
+
+.footer-links ul,
+.footer-members ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li,
+.footer-members li {
+  margin: 0.3125rem 0; /* 5px */
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Social Icons */
+.footer-social .social-icons {
+  display: grid;
+  grid-template-columns: repeat(2, 2.5rem); /* 40px */
+  gap: 0.625rem; /* 10px */
+}
+
+.footer-social .social-icons img {
+  background: #1a1a1a;
+  padding: 0.5rem;
+  border-radius: 0.5rem; /* 8px */
+  width: 1.5rem; /* 24px */
+  height: 1.5rem;
+}
+
+/* Copyright */
+.footer-bottom {
+  border-top: 1px solid #333;
+  text-align: center;
+  padding-top: 0.625rem; /* 10px */
+  font-size: 1rem;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  gap: 3.125rem; /* 50px */
+}
+
+.footer-logo {
+  text-align: center;
+}
+
+.footer-logo img {
+  width: 9.0625rem; /* 145px */
+  margin-bottom: 0.625rem; /* 10px */
+}
+
+.footer-chart img {
+  width: 15.625rem; /* 250px */
+  border-radius: 0.75rem; /* 12px */
+  background: #333;
+  padding: 0.625rem; /* 10px */
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 768px) {
+  /* Footer content and top section should be centered and aligned to wrap */
+  .footer-content, .footer-top {
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    gap: 1.5rem;
+  }
+  
+  /* The individual sections inside the footer content should also be centered */
+  .footer-links, .footer-members, .footer-social {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  /* Adjustments for the social icons on mobile */
+  .footer-social .social-icons {
+    justify-content: center;
+  }
+
+  /* Adjustments for images on mobile */
+  .footer-logo img {
+    width: 6.25rem; /* 100px */
+  }
+
+  .footer-chart img {
+    width: 10rem; /* 160px */
+  }
+}
